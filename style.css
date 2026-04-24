@@ -94,7 +94,8 @@ body {
 }
 
 .singles-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 

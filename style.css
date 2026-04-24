@@ -48,7 +48,6 @@ body {
   width: 200px !important;
   height: 200px !important;
   object-fit: cover;
-  border: 3px solid red;
 }
 
 .release h3 {
@@ -84,8 +83,4 @@ body {
 .release p {
   margin: 0;
   color: #aaa;
-}
-
-.release img {
-  border: none !important;
 }

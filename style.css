@@ -56,6 +56,12 @@ body {
   object-fit: cover;
 }
 
+.release {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .release h3 {
   margin: 14px 0 4px;
   font-size: 22px;

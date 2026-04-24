@@ -50,10 +50,9 @@ body {
   width: 350px;
 }
 
-.release iframe {
-  width: 100%;
-  height: 350px;
-  border: none;
+.releases-grid {
+  display: flex;
+  gap: 80px;
 }
 
 .release img {
@@ -69,7 +68,7 @@ body {
 }
 
 .release h3 {
-  margin: 14px 0 4px;
+  margin: 20px 0 4px;
   font-size: 22px;
 }
 

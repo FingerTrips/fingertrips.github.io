@@ -95,7 +95,7 @@ body {
 
 .singles-grid {
   display: grid;
-  grid-template-columns: repeat(4, 140px);
+  grid-template-columns: repeat(3, 140px);
   gap: 20px;
 }
 

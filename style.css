@@ -94,9 +94,12 @@ body {
 }
 
 .singles-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 20px;
+}
+
+.single {
+  width: 140px;
 }
 
 .single img {

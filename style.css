@@ -39,9 +39,8 @@ body {
 }
 
 .releases-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 260px);
-  gap: 30px;
+  display: flex;
+  gap: 40px;
 }
 
 .release img {
@@ -73,6 +72,10 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+}
+
+.release {
+  width: 260px;
 }
 
 .release h3 {

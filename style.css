@@ -60,3 +60,9 @@ body {
   margin: 0;
   color: #aaa;
 }
+
+img {
+  width: 200px !important;
+  height: 200px !important;
+  border: 5px solid yellow !important;
+}

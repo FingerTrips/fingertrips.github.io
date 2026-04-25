@@ -4,10 +4,16 @@ html {
 
 body {
   margin: 0;
-  padding-top: 60px;
+  padding-top: 70px;
   background: #0b0b0b;
   color: #f2eee8;
   font-family: Arial, sans-serif;
+}
+
+/* FIX SCROLL OFFSET */
+
+section {
+  scroll-margin-top: 90px;
 }
 
 /* GLOBAL LINKS */
@@ -144,10 +150,8 @@ a:hover {
 }
 
 .hero-socials img {
-  width: 22px !important;
-  height: 22px !important;
-  max-width: 22px;
-  display: block;
+  width: 22px;
+  height: 22px;
   filter: grayscale(1) brightness(1.2);
   transition: all 0.25s ease;
 }
@@ -155,15 +159,6 @@ a:hover {
 .hero-socials a:hover img {
   filter: none;
 }
-
-/* BRAND GLOW */
-
-.hero-socials a:nth-child(1):hover { filter: drop-shadow(0 0 6px rgba(255, 0, 120, 0.35)); }
-.hero-socials a:nth-child(2):hover { filter: drop-shadow(0 0 6px rgba(30, 215, 96, 0.35)); }
-.hero-socials a:nth-child(3):hover { filter: drop-shadow(0 0 6px rgba(255, 85, 0, 0.35)); }
-.hero-socials a:nth-child(4):hover { filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.35)); }
-.hero-socials a:nth-child(5):hover { filter: drop-shadow(0 0 6px rgba(24, 119, 242, 0.35)); }
-.hero-socials a:nth-child(6):hover { filter: drop-shadow(0 0 6px rgba(120, 255, 0, 0.35)); }
 
 /* HERO IMAGE */
 
@@ -186,9 +181,7 @@ a:hover {
   object-position: 60% center;
   filter: contrast(1.15) brightness(1.05);
   border-radius: 18px;
-  box-shadow:
-    0 40px 100px rgba(0, 0, 0, 0.7),
-    0 0 40px rgba(255, 60, 0, 0.08);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
 }
 
 /* DJ SETS */
@@ -201,30 +194,14 @@ a:hover {
 .releases h2,
 .contact h2 {
   font-size: 42px;
-  margin: 0 0 24px;
-}
-
-.sets-more {
-  margin: 0 0 26px;
-  font-size: 14px;
-}
-
-.sets-more a {
-  color: #aaa;
-  border-bottom: 1px solid #333;
-}
-
-.sets-more a:hover {
-  color: #f2eee8;
-  border-bottom: 1px solid #f2eee8;
-  opacity: 1;
+  margin-bottom: 24px;
 }
 
 .set {
   background: #111;
   padding: 10px;
   border-radius: 14px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .set:hover {
@@ -235,7 +212,6 @@ a:hover {
 .set iframe {
   width: 100%;
   height: 420px;
-  border: none;
   border-radius: 8px;
 }
 
@@ -252,44 +228,18 @@ a:hover {
 
 .release {
   width: 350px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .release:hover {
   transform: translateY(-8px);
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.6),
-    0 0 30px rgba(255, 80, 0, 0.12);
-}
-
-.release iframe {
-  width: 100%;
-  height: 460px;
-  border: none;
-  transition: transform 0.3s ease;
-}
-
-.release:hover iframe {
-  transform: scale(1.03);
-}
-
-.release h3 {
-  margin: 20px 0 4px;
-}
-
-.release p {
-  color: #aaa;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* SINGLES */
 
 .singles {
   padding: 70px 60px;
-}
-
-.singles h2 {
-  font-size: 36px;
-  margin: 0 0 24px;
 }
 
 .singles-grid {
@@ -299,28 +249,12 @@ a:hover {
 
 .single {
   width: 140px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.single:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 18px rgba(255, 255, 255, 0.06);
 }
 
 .single img {
   width: 140px;
   height: 140px;
-  object-fit: cover;
   border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.single:hover img {
-  transform: scale(1.05);
-}
-
-.single p {
-  color: #888;
 }
 
 /* CONTACT */
@@ -329,63 +263,16 @@ a:hover {
   padding: 90px 60px;
 }
 
-.contact-text {
-  color: #aaa;
-}
-
-.contact-email {
-  display: inline-block;
-  margin-top: 5px;
-}
-
-/* CURSOR GLOW */
-
-.cursor-glow {
-  position: fixed;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    rgba(255, 80, 0, 0.06) 0%,
-    rgba(255, 80, 0, 0.02) 40%,
-    transparent 70%
-  );
-}
-
-body > *:not(.cursor-glow) {
-  position: relative;
-  z-index: 1;
-}
-
 /* MOBILE */
 
 @media (max-width: 768px) {
+
   body {
     padding-top: 95px;
   }
 
-  .container {
-    max-width: 100%;
-  }
-
-  .hero .container {
-    max-width: 100%;
-  }
-
-  .nav-inner {
-    flex-direction: column;
-    gap: 12px;
-    padding: 16px 20px;
-  }
-
-  .nav-links {
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
+  section {
+    scroll-margin-top: 120px;
   }
 
   .hero {
@@ -394,22 +281,14 @@ body > *:not(.cursor-glow) {
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 
   .hero h1 {
     font-size: 86px;
-    letter-spacing: 5px;
-  }
-
-  .hero-tagline {
-    font-size: 15px;
-    letter-spacing: 3px;
   }
 
   .hero-photo img {
     height: auto;
-    object-position: center;
   }
 
   .sets,
@@ -419,36 +298,11 @@ body > *:not(.cursor-glow) {
     padding: 50px 20px;
   }
 
-  .sets h2,
-  .releases h2,
-  .contact h2 {
-    font-size: 36px;
-  }
-
   .releases-grid {
     flex-direction: column;
-    gap: 50px;
-  }
-
-  .release {
-    width: 100%;
   }
 
   .set iframe {
     height: 260px;
-  }
-
-  .singles-grid {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .single {
-    width: calc(50% - 8px);
-  }
-
-  .single img {
-    width: 100%;
-    height: auto;
   }
 }

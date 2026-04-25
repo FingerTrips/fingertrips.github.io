@@ -493,7 +493,7 @@ body > *:not(.cursor-glow):not(.nav) {
   .singles-col,
   .mini-contact,
   .albums-col {
-    scroll-margin-top: 110px;
+    scroll-margin-top: 120px;
   }
 
   .container {
@@ -503,43 +503,38 @@ body > *:not(.cursor-glow):not(.nav) {
 
   /* NAV MOBILE */
 
-.nav {
-  height: auto;
-  padding: 10px 0;
-}
+  .nav {
+    height: auto;
+    padding: 10px 0;
+  }
 
-.nav-inner {
-  display: flex;
-  flex-direction: column; /* 🔥 KLUCZ */
-  align-items: flex-start;
-  gap: 10px;
-  padding: 0 16px;
-}
+  .nav-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 0 16px;
+  }
 
-/* LOGO NA GÓRZE */
+  .nav-logo {
+    font-size: 20px;
+    line-height: 1.1;
+  }
 
-.nav-logo {
-  font-size: 20px;
-  line-height: 1.1;
-}
+  .nav-links {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 6px;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
 
-/* LINKI POD SPODem */
-
-.nav-links {
-  display: flex;
-  gap: 22px;
-  overflow-x: auto;
-  width: 100%;
-  padding-bottom: 6px;
-
-  /* smooth scroll */
-  -webkit-overflow-scrolling: touch;
-}
-
-.nav-links a {
-  font-size: 14px;
-  white-space: nowrap;
-}
+  .nav-links a {
+    font-size: 14px;
+    white-space: nowrap;
+  }
 
   /* HERO */
 
@@ -550,7 +545,7 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   .hero-inner {
-    align-items: flex-end;
+    display: block;
   }
 
   .hero-content {
@@ -586,21 +581,21 @@ body > *:not(.cursor-glow):not(.nav) {
       );
   }
 
-  /* SECTIONS */
+  /* SECTION SPACING SYSTEM */
 
-  .hero,
   .sets,
   .about-singles {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 20px;
+    margin-top: 80px;
   }
 
-  .sets {
-    padding-top: 60px;
+  .about-block,
+  .mini-contact {
+    margin-top: 80px;
   }
 
-  .about-singles {
-    padding-top: 60px;
+  .hero + .sets {
+    margin-top: 80px;
   }
 
   .sets h2,
@@ -610,7 +605,6 @@ body > *:not(.cursor-glow):not(.nav) {
 
   /* GRID */
 
-  .hero-inner,
   .about-singles-inner {
     display: block;
   }
@@ -650,10 +644,6 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   /* CONTACT */
-
-  .mini-contact {
-    margin-top: 120px;
-  }
 
   .contact-block {
     margin-bottom: 40px;

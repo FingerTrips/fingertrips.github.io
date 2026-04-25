@@ -36,6 +36,14 @@ body {
   font-weight: 700;
   font-size: 18px;
   letter-spacing: -0.5px;
+  color: #f2eee8;
+  text-decoration: none;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+.nav-logo:hover {
+  opacity: 1;
 }
 
 .nav-links {

@@ -144,32 +144,6 @@ a:hover {
   max-width: 360px;
 }
 
-.hero-socials {
-  margin-top: 30px;
-  display: flex;
-  gap: 18px;
-}
-
-.hero-socials a {
-  opacity: 0.6;
-  transition: 0.25s ease;
-}
-
-.hero-socials a:hover {
-  opacity: 1;
-  transform: translateY(-2px);
-}
-
-.hero-socials img {
-  width: 22px;
-  height: 22px;
-  filter: grayscale(1) brightness(1.2);
-}
-
-.hero-socials a:hover img {
-  filter: none;
-}
-
 .hero-photo {
   position: relative;
 }
@@ -195,14 +169,12 @@ a:hover {
 
 .sets,
 .about-singles,
-.releases,
-.contact {
+.releases {
   padding: 90px 60px;
 }
 
 .sets h2,
 .releases h2,
-.contact h2,
 .section-header h2 {
   font-size: 40px;
   margin: 0;
@@ -332,6 +304,59 @@ a:hover {
   margin: 0;
 }
 
+/* MINI CONTACT */
+
+.mini-contact {
+  margin-top: 46px;
+}
+
+.mini-contact h3 {
+  font-size: 20px;
+  margin: 0 0 12px;
+}
+
+.mini-contact p {
+  color: #aaa;
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 2px;
+  color: #f2eee8;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.contact-socials {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.contact-socials a {
+  opacity: 0.6;
+  transition: 0.25s ease;
+}
+
+.contact-socials a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.contact-socials img {
+  width: 21px;
+  height: 21px;
+  filter: grayscale(1) brightness(1.2);
+}
+
+.contact-socials a:hover img {
+  filter: none;
+}
+
 /* RELEASES */
 
 .releases h2 {
@@ -367,17 +392,6 @@ a:hover {
 .release p {
   margin: 0;
   color: #aaa;
-}
-
-/* CONTACT */
-
-.contact-text {
-  color: #aaa;
-}
-
-.contact-email {
-  display: inline-block;
-  margin-top: 5px;
 }
 
 /* CURSOR GLOW */
@@ -421,8 +435,7 @@ body > *:not(.cursor-glow) {
   .hero,
   .sets,
   .about-singles,
-  .releases,
-  .contact {
+  .releases {
     padding: 50px 20px;
   }
 
@@ -454,7 +467,6 @@ body > *:not(.cursor-glow) {
 
   .sets h2,
   .releases h2,
-  .contact h2,
   .section-header h2 {
     font-size: 36px;
   }

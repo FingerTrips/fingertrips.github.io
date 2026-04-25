@@ -358,8 +358,16 @@ a:hover {
   margin-top: 200px;
 }
 
+.contact-block {
+  margin-bottom: 52px;
+}
+
 .mini-contact .section-header {
   margin-bottom: 24px;
+}
+
+.follow-block .section-header {
+  margin-bottom: 18px;
 }
 
 .mini-contact p {
@@ -377,14 +385,23 @@ a:hover {
   border-bottom: 1px solid rgba(255,255,255,0.18);
 }
 
+.contact-email:hover {
+  opacity: 1;
+  color: #ff4d2d;
+  border-bottom-color: #ff4d2d;
+}
+
 .contact-socials {
-  margin-top: 20px;
+  margin-top: 0;
   display: flex;
   gap: 16px;
   align-items: center;
+  flex-wrap: wrap;
+  max-width: 260px;
 }
 
 .contact-socials a {
+  display: inline-flex;
   opacity: 0.6;
   transition: 0.25s ease;
 }
@@ -397,13 +414,13 @@ a:hover {
 .contact-socials img {
   width: 21px;
   height: 21px;
+  display: block;
   filter: grayscale(1) brightness(1.2);
 }
 
 .contact-socials a:hover img {
   filter: none;
 }
-
 /* CURSOR GLOW */
 
 .cursor-glow {

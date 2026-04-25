@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=6">
+  <link rel="stylesheet" href="./style.css?v=7">
 </head>
 
 <body>
@@ -80,6 +80,178 @@
 
   <!-- DJ SETS -->
   <section class="sets" id="sets">
+    <div class="container">
+      <h2>DJ Sets</h2>
+
+      <p class="sets-more">
+        Fresh set just dropped.
+        <a href="https://soundcloud.com/fingertrips/sets/mixs" target="_blank" rel="noopener">
+          More on SoundCloud
+        </a>
+      </p>
+
+      <div class="sets-grid">
+        <div class="set">
+          <iframe
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2295967283&color=%23ff0000&auto_play=false&hide_related=true&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+            allow="autoplay">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT + SINGLES -->
+  <section class="about-singles">
+    <div class="container about-singles-inner">
+
+      <!-- ABOUT -->
+      <div class="about-col" id="about">
+        <div class="section-header">
+          <h2>About</h2>
+        </div>
+
+        <div class="about-text">
+          <p>
+            Finger Trips is a DJ and producer based in Łódź, Poland, and the founder of Potok — a house music series running since 2020.
+          </p>
+
+          <p>
+            His sound blends minimal, deep tech and classic house influences, shaped by early inspirations from funk, soul and disco.
+          </p>
+
+          <p>
+            He has released music on labels such as Miura Records and Berlin House Music, and regularly performs at club P29.
+          </p>
+        </div>
+      </div>
+
+      <!-- SINGLES -->
+      <div class="singles-col" id="singles">
+        <div class="section-header">
+          <h2>Singles</h2>
+        </div>
+
+        <div class="singles-grid">
+          <a href="https://www.beatport.com/track/what-you-do/17933238" target="_blank" rel="noopener" class="single">
+            <img src="images/single-1.jpg" alt="What You Do">
+            <h3>What You Do</h3>
+            <p>Miura Records</p>
+          </a>
+
+          <a href="https://www.beatport.com/track/house-heads/17008905" target="_blank" rel="noopener" class="single">
+            <img src="images/single-3.jpg" alt="House Heads">
+            <h3>House Heads</h3>
+            <p>ATMO Recordings</p>
+          </a>
+
+          <a href="https://www.beatport.com/track/love-inside/17317714" target="_blank" rel="noopener" class="single">
+            <img src="images/single-2.jpg" alt="Love Inside">
+            <h3>Love Inside</h3>
+            <p>Rewind Records</p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RELEASES -->
+  <section class="releases" id="releases">
+    <div class="container">
+      <h2>Releases</h2>
+
+      <div class="releases-grid">
+        <div class="release">
+          <iframe
+            src="https://bandcamp.com/EmbeddedPlayer/album=839353287/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
+            seamless>
+          </iframe>
+
+          <h3>
+            <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">
+              Just Right
+            </a>
+          </h3>
+
+          <p>EP · 2026</p>
+        </div>
+
+        <div class="release">
+          <iframe
+            src="https://bandcamp.com/EmbeddedPlayer/album=3468378720/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
+            seamless>
+          </iframe>
+
+          <h3>
+            <a href="https://fingertrips.bandcamp.com/album/for-the-club" target="_blank" rel="noopener">
+              For The Club
+            </a>
+          </h3>
+
+          <p>EP · 2023</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+
+      <p class="contact-text">
+        For bookings, collaborations &amp; inquiries
+      </p>
+
+      <a href="mailto:potokfunka@gmail.com" class="contact-email">
+        potokfunka@gmail.com
+      </a>
+    </div>
+  </section>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow"></div>
+
+  <script>
+    const glow = document.querySelector('.cursor-glow');
+
+    window.addEventListener('mousemove', (e) => {
+      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+
+    const sections = document.querySelectorAll('section, .about-col, .singles-col');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+
+            navLinks.forEach((link) => {
+              link.classList.remove('active');
+
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      },
+      {
+        rootMargin: '-40% 0px -50% 0px',
+        threshold: 0
+      }
+    );
+
+    sections.forEach((section) => {
+      if (section.id) observer.observe(section);
+    });
+  </script>
+
+</body>
+</html>  <section class="sets" id="sets">
     <div class="container">
       <h2>DJ Sets</h2>
 

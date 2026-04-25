@@ -335,3 +335,7 @@ body {
     white-space: normal;
   }
 }
+
+.contact {
+  padding: 40px 20px;
+}

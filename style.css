@@ -85,6 +85,7 @@ body {
   background: #111;
   padding: 10px;
   border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .set iframe {
@@ -232,7 +233,6 @@ body {
 
 .contact {
   padding: 80px 60px;
-  text-align: center;
 }
 
 .contact h2 {
@@ -246,6 +246,8 @@ body {
 }
 
 .contact-email {
+  display: inline-block;
+  margin-top: 5px;
   color: #f2eee8;
   text-decoration: none;
   font-size: 18px;
@@ -270,7 +272,6 @@ body {
   }
 
   .hero-inner {
-    display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
   }
@@ -285,7 +286,8 @@ body {
 
   .sets,
   .releases,
-  .singles {
+  .singles,
+  .contact {
     padding: 40px 20px;
   }
 
@@ -335,8 +337,4 @@ body {
   .sets-more {
     white-space: normal;
   }
-}
-
-.contact {
-  padding: 40px 20px;
 }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=9">
+  <link rel="stylesheet" href="./style.css?v=10">
 </head>
 
 <body>
@@ -19,8 +19,8 @@
         <a href="#sets">Sets</a>
         <a href="#about">About</a>
         <a href="#singles">Singles</a>
-        <a href="#contact">Contact</a>
         <a href="#albums">Albums</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -227,7 +227,7 @@
       glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     });
 
-    const sections = document.querySelectorAll('section, .about-col, .singles-col, .mini-contact');
+    const sections = document.querySelectorAll('#sets, #about, #singles, #contact, #albums');
     const navLinks = document.querySelectorAll('.nav-links a');
 
     const observer = new IntersectionObserver(

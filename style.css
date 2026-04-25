@@ -421,8 +421,7 @@ a:hover {
     transparent 70%
   );
 }
-
-body > *:not(.cursor-glow) {
+body > *:not(.cursor-glow):not(.nav) {
   position: relative;
   z-index: 1;
 }

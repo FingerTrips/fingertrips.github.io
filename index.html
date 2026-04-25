@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=10">
+  <link rel="stylesheet" href="./style.css?v=11">
 </head>
 
 <body>
@@ -75,11 +75,11 @@
     </div>
   </section>
 
-  <!-- ABOUT + SINGLES + CONTACT -->
+  <!-- ABOUT + ALBUMS / SINGLES + CONTACT -->
   <section class="about-singles">
     <div class="container about-singles-inner">
 
-      <!-- ABOUT -->
+      <!-- LEFT: ABOUT + ALBUMS -->
       <div class="about-col" id="about">
         <div class="section-header">
           <h2>About</h2>
@@ -98,9 +98,47 @@
             He has released music on labels such as Miura Records and Berlin House Music, and regularly performs at club P29.
           </p>
         </div>
+
+        <div class="albums-col" id="albums">
+          <div class="section-header">
+            <h2>Albums</h2>
+          </div>
+
+          <div class="albums-grid">
+            <div class="album">
+              <iframe
+                src="https://bandcamp.com/EmbeddedPlayer/album=839353287/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
+                seamless>
+              </iframe>
+
+              <h3>
+                <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">
+                  Just Right
+                </a>
+              </h3>
+
+              <p>EP · 2026</p>
+            </div>
+
+            <div class="album">
+              <iframe
+                src="https://bandcamp.com/EmbeddedPlayer/album=3468378720/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
+                seamless>
+              </iframe>
+
+              <h3>
+                <a href="https://fingertrips.bandcamp.com/album/for-the-club" target="_blank" rel="noopener">
+                  For The Club
+                </a>
+              </h3>
+
+              <p>EP · 2023</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- SINGLES + CONTACT -->
+      <!-- RIGHT: SINGLES + CONTACT -->
       <div class="singles-col" id="singles">
         <div class="section-header">
           <h2>Singles</h2>
@@ -170,53 +208,6 @@
     </div>
   </section>
 
-  <!-- ALBUMS -->
-  <section class="albums" id="albums">
-    <div class="container albums-inner">
-
-      <div class="albums-col">
-        <div class="section-header">
-          <h2>Albums</h2>
-        </div>
-
-        <div class="albums-grid">
-          <div class="album">
-            <iframe
-              src="https://bandcamp.com/EmbeddedPlayer/album=839353287/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
-              seamless>
-            </iframe>
-
-            <h3>
-              <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">
-                Just Right
-              </a>
-            </h3>
-
-            <p>EP · 2026</p>
-          </div>
-
-          <div class="album">
-            <iframe
-              src="https://bandcamp.com/EmbeddedPlayer/album=3468378720/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
-              seamless>
-            </iframe>
-
-            <h3>
-              <a href="https://fingertrips.bandcamp.com/album/for-the-club" target="_blank" rel="noopener">
-                For The Club
-              </a>
-            </h3>
-
-            <p>EP · 2023</p>
-          </div>
-        </div>
-      </div>
-
-      <div></div>
-
-    </div>
-  </section>
-
   <!-- CURSOR GLOW -->
   <div class="cursor-glow"></div>
 
@@ -227,7 +218,7 @@
       glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     });
 
-    const sections = document.querySelectorAll('#sets, #about, #singles, #contact, #albums');
+    const sections = document.querySelectorAll('#sets, #about, #singles, #albums, #contact');
     const navLinks = document.querySelectorAll('.nav-links a');
 
     const observer = new IntersectionObserver(

@@ -228,6 +228,35 @@ body {
   margin: 0;
 }
 
+/* CONTACT */
+
+.contact {
+  padding: 80px 60px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.contact-text {
+  color: #aaa;
+  margin-bottom: 10px;
+}
+
+.contact-email {
+  color: #f2eee8;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.contact-email:hover {
+  border-bottom: 1px solid #f2eee8;
+}
+
 /* MOBILE */
 
 @media (max-width: 768px) {

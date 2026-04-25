@@ -227,3 +227,63 @@ body {
   color: #888;
   margin: 0;
 }
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero img {
+    height: auto;
+  }
+
+  /* SECTIONS */
+  .sets,
+  .releases,
+  .singles {
+    padding: 40px 20px;
+  }
+
+  /* RELEASES */
+  .releases-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .release {
+    width: 100%;
+  }
+
+  /* SINGLES */
+  .singles-grid {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .single {
+    flex: 0 0 48%;
+  }
+
+  /* SETS */
+  .set iframe {
+    height: 240px;
+  }
+
+  /* TEXT FIX */
+  .sets-more {
+    white-space: normal;
+  }
+}

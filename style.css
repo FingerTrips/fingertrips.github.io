@@ -667,6 +667,10 @@ body > *:not(.cursor-glow):not(.nav) {
 
   /* SINGLES */
 
+  .singles-col {
+  margin-top: 80px;
+}
+  
   .singles-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
@@ -692,4 +696,7 @@ body > *:not(.cursor-glow):not(.nav) {
     max-width: 100%;
     gap: 18px;
   }
+  .mini-contact {
+  padding-bottom: 120px;
+}
 }

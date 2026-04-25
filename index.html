@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=14">
+  <link rel="stylesheet" href="./style.css?v=15">
 </head>
 
 <body>
@@ -120,7 +120,7 @@
           </div>
         </div>
 
-        <div class="about-block" id="about">
+        <div class="about-block section-spacing" id="about">
           <div class="section-header">
             <h2>About</h2>
           </div>
@@ -168,7 +168,7 @@
           </a>
         </div>
 
-        <div class="mini-contact" id="contact">
+        <div class="mini-contact section-spacing" id="contact">
           <div class="section-header">
             <h2>Contact</h2>
           </div>
@@ -215,47 +215,47 @@
   <!-- CURSOR GLOW -->
   <div class="cursor-glow"></div>
 
- <script>
-  const glow = document.querySelector('.cursor-glow');
+  <script>
+    const glow = document.querySelector('.cursor-glow');
 
-  window.addEventListener('mousemove', (e) => {
-    glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-  });
-
-  const sections = [
-    document.querySelector('#sets'),
-    document.querySelector('#albums'),
-    document.querySelector('#about'),
-    document.querySelector('#singles'),
-    document.querySelector('#contact')
-  ];
-
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  function updateNav() {
-    let current = null;
-
-    sections.forEach((section) => {
-      if (!section) return;
-
-      const rect = section.getBoundingClientRect();
-
-      if (rect.top <= window.innerHeight * 0.4) {
-        current = section.id;
-      }
+    window.addEventListener('mousemove', (e) => {
+      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     });
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  }
+    const sections = [
+      document.querySelector('#sets'),
+      document.querySelector('#albums'),
+      document.querySelector('#about'),
+      document.querySelector('#singles'),
+      document.querySelector('#contact')
+    ];
 
-  window.addEventListener('scroll', updateNav);
-  window.addEventListener('load', updateNav);
-</script>
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function updateNav() {
+      let current = null;
+
+      sections.forEach((section) => {
+        if (!section) return;
+
+        const rect = section.getBoundingClientRect();
+
+        if (rect.top <= window.innerHeight * 0.4) {
+          current = section.id;
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', updateNav);
+    window.addEventListener('load', updateNav);
+  </script>
 
 </body>
 </html>

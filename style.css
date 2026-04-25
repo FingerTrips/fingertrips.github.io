@@ -121,7 +121,7 @@ a:hover {
   object-fit: cover;
 
   /* 🔥 KLUCZOWE */
-  object-position: 82% 35%;
+  object-position: 82% 75%;
 
   filter: brightness(0.95) contrast(1.08);
 }

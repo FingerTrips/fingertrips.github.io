@@ -477,7 +477,6 @@ body > *:not(.cursor-glow):not(.nav) {
   position: relative;
   z-index: 1;
 }
-
 /* MOBILE */
 
 @media (max-width: 768px) {
@@ -536,67 +535,63 @@ body > *:not(.cursor-glow):not(.nav) {
     white-space: nowrap;
   }
 
-  /* HERO MOBILE FIX */
+  /* HERO MOBILE */
 
-.hero {
-  height: 640px;
-  min-height: 640px;
-  padding: 0 20px 60px;
-}
+  .hero {
+    height: 640px;
+    min-height: 640px;
+    padding: 0 20px 60px;
+  }
 
-.hero-inner {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-}
+  .hero-inner {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
 
-.hero-content {
-  max-width: 100%;
-  padding-bottom: 40px;
-}
+  .hero-content {
+    max-width: 100%;
+    padding-bottom: 40px;
+  }
 
-.hero h1 {
-  font-size: 64px;
-  line-height: 0.82;
-}
+  .hero h1 {
+    font-size: 64px;
+    line-height: 0.82;
+  }
 
-.hero-tagline {
-  font-size: 13px;
-  margin-top: 18px;
-}
+  .hero-tagline {
+    font-size: 13px;
+    margin-top: 18px;
+  }
 
-.hero-bio {
-  font-size: 14px;
-  max-width: 92%;
-}
+  .hero-bio {
+    font-size: 14px;
+    max-width: 92%;
+  }
 
-/* 🔥 zdjęcie – jasne i dobrze wykadrowane */
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 90% 30%;
+    filter: brightness(1.12) contrast(1.05);
+  }
 
-.hero-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 90% 30%;
-  filter: brightness(1.08) contrast(1.05);
-}
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.20) 38%,
+        rgba(0,0,0,0.72) 100%
+      );
+  }
 
-/* 🔥 overlay – lekki, nie zabija zdjęcia */
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(0,0,0,0.05) 0%,
-      rgba(0,0,0,0.25) 40%,
-      rgba(0,0,0,0.75) 40%
-    );
-  z-index: -1;
-}
-
-  /* SECTION SPACING SYSTEM */
+  /* SECTION SPACING */
 
   .sets,
   .about-singles {

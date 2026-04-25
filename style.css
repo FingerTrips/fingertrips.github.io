@@ -119,7 +119,7 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% center;
+  object-position: 78% center;
   filter: brightness(0.95) contrast(1.08);
 }
 
@@ -131,15 +131,15 @@ a:hover {
   background:
     linear-gradient(
       to right,
-      rgba(0,0,0,0.94) 0%,
-      rgba(0,0,0,0.78) 35%,
-      rgba(0,0,0,0.32) 70%,
-      rgba(0,0,0,0.12) 100%
+      rgba(0,0,0,0.96) 0%,
+      rgba(0,0,0,0.86) 32%,
+      rgba(0,0,0,0.44) 62%,
+      rgba(0,0,0,0.14) 100%
     ),
     radial-gradient(
-      circle at 72% 45%,
-      rgba(255,40,0,0.22),
-      transparent 58%
+      circle at 74% 45%,
+      rgba(255,40,0,0.16),
+      transparent 60%
     );
 }
 
@@ -147,19 +147,21 @@ a:hover {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .hero-content {
-  max-width: 520px;
+  max-width: 560px;
   position: relative;
   z-index: 2;
+  margin-left: 40px;
 }
 
 .hero h1 {
   font-family: "Bebas Neue", Arial, sans-serif;
-  font-size: 118px;
-  line-height: 0.78;
-  letter-spacing: 6px;
+  font-size: 140px;
+  line-height: 0.75;
+  letter-spacing: 4px;
   margin: 0;
   text-transform: uppercase;
 }
@@ -169,8 +171,8 @@ a:hover {
 }
 
 .hero-tagline {
-  margin-top: 28px;
-  font-size: 16px;
+  margin-top: 30px;
+  font-size: 17px;
   text-transform: uppercase;
   color: #ff4d2d;
 }
@@ -189,10 +191,10 @@ a:hover {
 }
 
 .hero-bio {
-  margin-top: 18px;
+  margin-top: 20px;
   font-size: 15px;
   color: #aaa;
-  max-width: 380px;
+  max-width: 390px;
   line-height: 1.6;
 }
 

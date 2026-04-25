@@ -215,44 +215,46 @@
   <!-- CURSOR GLOW -->
   <div class="cursor-glow"></div>
 
-  <script>
+ <script>
   const glow = document.querySelector('.cursor-glow');
 
   window.addEventListener('mousemove', (e) => {
     glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   });
 
-  const navTargets = [
+  const sections = [
     document.querySelector('#sets'),
     document.querySelector('#albums'),
     document.querySelector('#about'),
     document.querySelector('#singles'),
     document.querySelector('#contact')
-  ].filter(Boolean);
+  ];
 
   const navLinks = document.querySelectorAll('.nav-links a');
 
-  const setActiveLink = (id) => {
-    navLinks.forEach((link) => {
-      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-    });
-  };
+  function updateNav() {
+    let current = null;
 
-  window.addEventListener('scroll', () => {
-    let currentId = 'sets';
+    sections.forEach((section) => {
+      if (!section) return;
 
-    navTargets.forEach((section) => {
       const rect = section.getBoundingClientRect();
 
-      if (rect.top <= window.innerHeight * 0.45) {
-        currentId = section.id;
+      if (rect.top <= window.innerHeight * 0.4) {
+        current = section.id;
       }
     });
 
-    setActiveLink(currentId);
-  });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
 
-  setActiveLink('sets');
+  window.addEventListener('scroll', updateNav);
+  window.addEventListener('load', updateNav);
 </script>
 
 </body>

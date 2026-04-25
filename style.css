@@ -481,8 +481,11 @@ body > *:not(.cursor-glow):not(.nav) {
 /* MOBILE */
 
 @media (max-width: 768px) {
+
+  /* GLOBAL */
+
   body {
-    padding-top: 90px;
+    padding-top: 82px;
   }
 
   section,
@@ -490,62 +493,138 @@ body > *:not(.cursor-glow):not(.nav) {
   .singles-col,
   .mini-contact,
   .albums-col {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 110px;
   }
 
   .container {
     max-width: 100%;
+    padding: 0 16px;
   }
+
+  /* NAV */
+
+  .nav {
+    height: 82px;
+    overflow-x: auto;
+  }
+
+  .nav-inner {
+    height: 82px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 16px;
+    min-width: max-content;
+  }
+
+  .nav-logo {
+    font-size: 20px;
+    line-height: 1.05;
+    min-width: 90px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 26px;
+    white-space: nowrap;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+  }
+
+  /* HERO */
+
+  .hero {
+    height: auto;
+    min-height: unset;
+    padding: 110px 20px 60px;
+  }
+
+  .hero-inner {
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 72px;
+    line-height: 0.8;
+  }
+
+  .hero-tagline {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .hero-bio {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .hero-photo img {
+    object-position: 70% 20%;
+  }
+
+  .hero::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.6) 0%,
+        rgba(0,0,0,0.9) 55%,
+        rgba(0,0,0,0.98) 100%
+      );
+  }
+
+  /* SECTIONS */
 
   .hero,
   .sets,
   .about-singles {
-    padding: 50px 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  .hero-inner,
-  .about-singles-inner {
-    grid-template-columns: 1fr;
-    gap: 50px;
+  .sets {
+    padding-top: 60px;
   }
 
-  .hero h1 {
-    font-size: 80px;
-  }
-
-  .hero-tagline {
-    font-size: 15px;
-  }
-
-  .hero-tagline span:first-child {
-    letter-spacing: 2.5px;
-  }
-
-  .hero-tagline span:last-child {
-    letter-spacing: 1.8px;
-  }
-
-  .hero-photo img {
-    height: auto;
+  .about-singles {
+    padding-top: 60px;
   }
 
   .sets h2,
   .section-header h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
+
+  /* GRID */
+
+  .hero-inner,
+  .about-singles-inner {
+    display: block;
+  }
+
+  /* DJ SET */
 
   .set iframe {
     height: 260px;
   }
 
+  /* ALBUMS */
+
   .albums-grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+    gap: 40px;
   }
 
   .album iframe {
-    height: 420px;
+    height: 380px;
   }
+
+  /* SINGLES */
 
   .singles-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -558,7 +637,22 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .single img {
     width: 100%;
-    height: auto;
     aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  /* CONTACT */
+
+  .mini-contact {
+    margin-top: 120px;
+  }
+
+  .contact-block {
+    margin-bottom: 40px;
+  }
+
+  .contact-socials {
+    max-width: 100%;
+    gap: 18px;
   }
 }

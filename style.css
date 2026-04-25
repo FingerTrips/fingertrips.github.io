@@ -132,6 +132,63 @@ a:hover {
   display: block;
 }
 
+.hero-tagline {
+  margin-top: 26px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #ff4d2d;
+}
+
+.hero-tagline span {
+  display: block;
+}
+
+.hero-tagline span:first-child {
+  letter-spacing: 3px;
+}
+
+.hero-tagline span:last-child {
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.hero-bio {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #aaa;
+  max-width: 360px;
+  line-height: 1.6;
+}
+
+.hero-photo {
+  position: relative;
+}
+
+.hero-photo::before {
+  content: "";
+  position: absolute;
+  inset: -60px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 30, 0, 0.25),
+    transparent 65%
+  );
+
+  filter: blur(40px);
+  z-index: -1;
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  object-position: 60% center;
+
+  border-radius: 20px;
+  box-shadow: 0 40px 120px rgba(0,0,0,0.8);
+}
+
 /* SECTIONS */
 
 .sets,

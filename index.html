@@ -216,41 +216,44 @@
   <div class="cursor-glow"></div>
 
   <script>
-    const glow = document.querySelector('.cursor-glow');
+  const glow = document.querySelector('.cursor-glow');
 
-    window.addEventListener('mousemove', (e) => {
-      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  window.addEventListener('mousemove', (e) => {
+    glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  });
+
+  const navTargets = [
+    document.querySelector('#sets'),
+    document.querySelector('#albums'),
+    document.querySelector('#about'),
+    document.querySelector('#singles'),
+    document.querySelector('#contact')
+  ].filter(Boolean);
+
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  const setActiveLink = (id) => {
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + id);
     });
+  };
 
-    const sections = document.querySelectorAll('#sets, #about, #singles, #albums, #contact');
-    const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let currentId = 'sets';
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
+    navTargets.forEach((section) => {
+      const rect = section.getBoundingClientRect();
 
-            navLinks.forEach((link) => {
-              link.classList.remove('active');
-
-              if (link.getAttribute('href') === '#' + id) {
-                link.classList.add('active');
-              }
-            });
-          }
-        });
-      },
-      {
-        rootMargin: '-40% 0px -50% 0px',
-        threshold: 0
+      if (rect.top <= window.innerHeight * 0.45) {
+        currentId = section.id;
       }
-    );
-
-    sections.forEach((section) => {
-      if (section.id) observer.observe(section);
     });
-  </script>
+
+    setActiveLink(currentId);
+  });
+
+  setActiveLink('sets');
+</script>
 
 </body>
 </html>

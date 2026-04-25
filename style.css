@@ -80,6 +80,23 @@ body {
   color: #aaa;
 }
 
+.release iframe {
+  transition: transform 0.3s ease;
+}
+
+.release:hover iframe {
+  transform: scale(1.03);
+}
+
+.release {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.release:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
 /* SINGLES */
 
 .singles {

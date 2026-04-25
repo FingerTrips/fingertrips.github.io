@@ -8,6 +8,22 @@
   <link rel="stylesheet" href="./style.css?v=1">
 </head>
 
+  <div class="cursor-glow"></div>
+
+<script>
+
+  const glow = document.querySelector('.cursor-glow');
+
+  window.addEventListener('mousemove', (e) => {
+
+    glow.style.left = e.clientX + 'px';
+
+    glow.style.top = e.clientY + 'px';
+
+  });
+
+</script>
+
 <body>
 
   <!-- NAV -->

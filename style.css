@@ -550,12 +550,15 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   .hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-    object-position: 78% 30%;
+  /* 🔥 TWÓJ CEL */
+  object-position: 82% 35%;
 
-    filter: brightness(1.12) contrast(1.05);
-
-  }
+  filter: brightness(1.1) contrast(1.05);
+}
 
   .hero::after {
 

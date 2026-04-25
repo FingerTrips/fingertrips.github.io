@@ -533,7 +533,7 @@ body > *:not(.cursor-glow):not(.nav) {
     white-space: nowrap;
   }
 
-  /* HERO MOBILE */
+    /* HERO MOBILE */
 
   .hero {
     height: 680px;
@@ -541,26 +541,31 @@ body > *:not(.cursor-glow):not(.nav) {
     padding: 0;
   }
 
-  .hero-photo img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-
-  /* kadr */
-  object-position: 78% 38% !important;
-
-  /* fizyczne przesunięcie zdjęcia */
-  transform: translateX(35px) translateY(25px) scale(1.01) !important;
-  transform-origin: center center;
-
-  filter: brightness(1.1) contrast(1.05);
-}
-
   .hero-photo {
-  overflow: hidden;
-}
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .hero-photo img {
+    position: absolute;
+    width: 120% !important;
+    height: 120% !important;
+    max-width: none !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    top: -13%;
+    right: -15%;
+
+    transform: none !important;
+    filter: brightness(1.1) contrast(1.05);
+  }
 
   .hero::after {
+    z-index: 1;
     background:
       linear-gradient(
         to bottom,
@@ -571,6 +576,8 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   .hero-inner {
+    position: relative;
+    z-index: 2;
     height: 100%;
     padding: 0 20px;
     align-items: flex-end;

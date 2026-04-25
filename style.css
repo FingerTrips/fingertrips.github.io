@@ -15,7 +15,8 @@ body {
 section,
 .about-col,
 .singles-col,
-.mini-contact {
+.mini-contact,
+.albums {
   scroll-margin-top: 90px;
 }
 
@@ -172,9 +173,12 @@ a:hover {
 /* SECTIONS */
 
 .sets,
-.about-singles,
-.albums {
+.about-singles {
   padding: 90px 60px;
+}
+
+.albums {
+  padding: 30px 60px 90px;
 }
 
 .sets h2,
@@ -429,7 +433,8 @@ body > *:not(.cursor-glow) {
   section,
   .about-col,
   .singles-col,
-  .mini-contact {
+  .mini-contact,
+  .albums {
     scroll-margin-top: 120px;
   }
 
@@ -439,9 +444,12 @@ body > *:not(.cursor-glow) {
 
   .hero,
   .sets,
-  .about-singles,
-  .albums {
+  .about-singles {
     padding: 50px 20px;
+  }
+
+  .albums {
+    padding: 30px 20px 50px;
   }
 
   .hero-inner,

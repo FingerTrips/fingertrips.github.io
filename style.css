@@ -278,8 +278,8 @@ a:hover {
 
 .about-singles-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 70px;
   align-items: start;
 }
 
@@ -300,12 +300,13 @@ a:hover {
 
 .singles-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 150px));
   gap: 18px;
+  justify-content: start;
 }
 
 .single {
-  width: 100%;
+  width: 150px;
   transition: 0.25s ease;
 }
 
@@ -314,9 +315,8 @@ a:hover {
 }
 
 .single img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  height: auto;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -470,5 +470,15 @@ body > *:not(.cursor-glow) {
   .singles-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .single {
+    width: 100%;
+  }
+
+  .single img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
   }
 }

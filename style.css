@@ -227,3 +227,20 @@ body {
 .single p {
   color: #888;
 }
+
+.single {
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.single:hover {
+  transform: translateY(-6px);
+  opacity: 0.9;
+}
+
+.single img {
+  transition: transform 0.3s ease;
+}
+
+.single:hover img {
+  transform: scale(1.05);
+}

@@ -128,12 +128,26 @@ a:hover {
   display: block;
 }
 
+/* HERO TAGLINE */
+
 .hero-tagline {
   margin-top: 28px;
   font-size: 16px;
-  letter-spacing: 3px;
   text-transform: uppercase;
   color: #ff4d2d;
+}
+
+.hero-tagline span {
+  display: block;
+}
+
+.hero-tagline span:first-child {
+  letter-spacing: 3px;
+}
+
+.hero-tagline span:last-child {
+  letter-spacing: 2px;
+  opacity: 0.78;
 }
 
 .hero-bio {
@@ -246,7 +260,7 @@ a:hover {
   transform: translateY(-6px);
 }
 
-/* 🔥 FIX — BANDCAMP */
+/* BANDCAMP */
 
 .release iframe {
   width: 100%;
@@ -318,6 +332,18 @@ a:hover {
 
   .hero h1 {
     font-size: 80px;
+  }
+
+  .hero-tagline {
+    font-size: 15px;
+  }
+
+  .hero-tagline span:first-child {
+    letter-spacing: 2.5px;
+  }
+
+  .hero-tagline span:last-child {
+    letter-spacing: 1.8px;
   }
 
   .hero-photo img {

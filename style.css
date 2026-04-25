@@ -23,6 +23,7 @@ body {
   backdrop-filter: blur(14px);
   z-index: 100;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  transition: background 0.3s ease;
 }
 
 .nav-inner {
@@ -66,7 +67,7 @@ body {
 /* HERO */
 
 .hero {
-  padding: 90px 60px 100px;
+  padding: 120px 60px 120px;
 }
 
 .hero-inner {
@@ -165,7 +166,7 @@ body {
 
 .set:hover {
   transform: translateY(-6px);
-  box-shadow: 0 24px 60px rgba(255, 60, 0, 0.12);
+  box-shadow: 0 20px 60px rgba(255, 80, 0, 0.08);
 }
 
 .set iframe {

@@ -119,7 +119,10 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 78% center;
+
+  /* 🔥 KLUCZOWE */
+  object-position: 82% 35%;
+
   filter: brightness(0.95) contrast(1.08);
 }
 

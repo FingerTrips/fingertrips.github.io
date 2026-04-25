@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: #0b0b0b;
@@ -10,10 +14,51 @@ body {
   margin: 0 auto;
 }
 
+/* NAV */
+
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(11, 11, 11, 0.82);
+  backdrop-filter: blur(14px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #f2eee8;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
 /* HERO */
 
 .hero {
-  padding: 80px 60px;
+  padding: 90px 60px 100px;
 }
 
 .hero-inner {
@@ -37,7 +82,7 @@ body {
 .hero p {
   font-size: 18px;
   color: #aaa;
-  margin-top: 20px;
+  margin-top: 22px;
   line-height: 1.5;
 }
 
@@ -61,31 +106,58 @@ body {
   height: 500px;
   object-fit: cover;
   border-radius: 20px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
 
 /* DJ SETS */
 
 .sets {
-  padding: 80px 60px;
+  padding: 90px 60px;
 }
 
-.sets h2 {
+.sets h2,
+.releases h2,
+.contact h2 {
   font-size: 42px;
-  margin-bottom: 30px;
+  margin: 0 0 24px;
+  letter-spacing: -1px;
+}
+
+.sets-more {
+  margin: 0 0 26px;
+  font-size: 14px;
+  color: #f2eee8;
+}
+
+.sets-more a {
+  color: #aaa;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: all 0.2s ease;
+}
+
+.sets-more a:hover {
+  color: #f2eee8;
+  border-bottom: 1px solid #f2eee8;
 }
 
 .sets-grid {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 
 .set {
   width: 100%;
   background: #111;
   padding: 10px;
-  border-radius: 12px;
+  border-radius: 14px;
   box-sizing: border-box;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.set:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 60px rgba(255, 60, 0, 0.12);
 }
 
 .set iframe {
@@ -93,37 +165,13 @@ body {
   height: 420px;
   border: none;
   display: block;
-}
-
-.sets-more {
-  margin-top: 30px;
-  color: #aaa;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.sets-more a {
-  color: #f2eee8;
-  text-decoration: none;
-  border-bottom: 1px solid #333;
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
-}
-
-.sets-more a:hover {
-  border-bottom: 1px solid #f2eee8;
-  opacity: 0.8;
+  border-radius: 8px;
 }
 
 /* RELEASES */
 
 .releases {
-  padding: 80px 60px;
-}
-
-.releases h2 {
-  font-size: 42px;
-  margin-bottom: 30px;
+  padding: 90px 60px;
 }
 
 .releases-grid {
@@ -179,12 +227,13 @@ body {
 /* SINGLES */
 
 .singles {
-  padding: 60px;
+  padding: 70px 60px 90px;
 }
 
 .singles h2 {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin: 0 0 24px;
+  letter-spacing: -0.5px;
 }
 
 .singles-grid {
@@ -232,17 +281,13 @@ body {
 /* CONTACT */
 
 .contact {
-  padding: 80px 60px;
-}
-
-.contact h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
+  padding: 90px 60px 110px;
 }
 
 .contact-text {
   color: #aaa;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  line-height: 1.5;
 }
 
 .contact-email {
@@ -267,17 +312,33 @@ body {
     max-width: 100%;
   }
 
+  .nav-inner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .hero {
-    padding: 40px 20px;
+    padding: 50px 20px 60px;
   }
 
   .hero-inner {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 32px;
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 52px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 
   .hero img {
@@ -288,21 +349,26 @@ body {
   .releases,
   .singles,
   .contact {
-    padding: 40px 20px;
+    padding: 50px 20px;
   }
 
-  .sets-grid {
-    gap: 30px;
+  .sets h2,
+  .releases h2,
+  .contact h2 {
+    font-size: 36px;
   }
 
   .set {
-    width: 100%;
-    box-sizing: border-box;
+    padding: 8px;
   }
 
   .set iframe {
-    width: 100%;
-    height: 240px;
+    height: 260px;
+  }
+
+  .sets-more {
+    white-space: normal;
+    line-height: 1.5;
   }
 
   .releases-grid {
@@ -319,7 +385,6 @@ body {
   }
 
   .singles-grid {
-    display: flex;
     flex-wrap: wrap;
     gap: 16px;
   }
@@ -332,9 +397,5 @@ body {
   .single img {
     width: 100%;
     height: auto;
-  }
-
-  .sets-more {
-    white-space: normal;
   }
 }

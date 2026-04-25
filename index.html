@@ -5,24 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=1">
+  <link rel="stylesheet" href="./style.css?v=final">
 </head>
-
-  <div class="cursor-glow"></div>
-
-<script>
-
-  const glow = document.querySelector('.cursor-glow');
-
-  window.addEventListener('mousemove', (e) => {
-
-    glow.style.left = e.clientX + 'px';
-
-    glow.style.top = e.clientY + 'px';
-
-  });
-
-</script>
 
 <body>
 
@@ -189,6 +173,17 @@
       </a>
     </div>
   </section>
+
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow"></div>
+
+  <script>
+    const glow = document.querySelector('.cursor-glow');
+
+    window.addEventListener('mousemove', (e) => {
+      glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    });
+  </script>
 
 </body>
 </html>

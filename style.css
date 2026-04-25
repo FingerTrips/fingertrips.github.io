@@ -538,48 +538,51 @@ body > *:not(.cursor-glow):not(.nav) {
 
   /* HERO */
 
-  .hero {
-    height: auto;
-    min-height: unset;
-    padding: 110px 20px 60px;
-  }
+.hero {
+  height: 640px;
+  min-height: 640px;
+  padding: 0 20px 60px;
+}
 
-  .hero-inner {
-    display: block;
-  }
+.hero-inner {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
 
-  .hero-content {
-    max-width: 100%;
-  }
+.hero-content {
+  max-width: 100%;
+  padding-bottom: 40px;
+}
 
-  .hero h1 {
-    font-size: 72px;
-    line-height: 0.8;
-  }
+.hero h1 {
+  font-size: 64px;
+  line-height: 0.82;
+}
 
-  .hero-tagline {
-    font-size: 14px;
-    margin-top: 20px;
-  }
+.hero-tagline {
+  font-size: 13px;
+  margin-top: 18px;
+}
 
-  .hero-bio {
-    font-size: 14px;
-    max-width: 100%;
-  }
+.hero-bio {
+  font-size: 14px;
+  max-width: 92%;
+}
 
-  .hero-photo img {
-    object-position: 70% 20%;
-  }
+.hero-photo img {
+  object-position: 70% 18%;
+}
 
-  .hero::after {
-    background:
-      linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.6) 0%,
-        rgba(0,0,0,0.9) 55%,
-        rgba(0,0,0,0.98) 100%
-      );
-  }
+.hero::after {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.15) 0%,
+      rgba(0,0,0,0.45) 38%,
+      rgba(0,0,0,0.92) 100%
+    );
+}
 
   /* SECTION SPACING SYSTEM */
 

@@ -12,7 +12,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
-section {
+section,
+.about-col,
+.singles-col,
+.mini-contact {
   scroll-margin-top: 90px;
 }
 
@@ -33,7 +36,8 @@ a:hover {
 }
 
 .hero .container,
-.about-singles .container {
+.about-singles .container,
+.albums .container {
   max-width: 1120px;
 }
 
@@ -169,12 +173,11 @@ a:hover {
 
 .sets,
 .about-singles,
-.releases {
+.albums {
   padding: 90px 60px;
 }
 
 .sets h2,
-.releases h2,
 .section-header h2 {
   font-size: 40px;
   margin: 0;
@@ -212,10 +215,6 @@ a:hover {
 }
 
 /* DJ SET */
-
-.sets h2 {
-  margin-bottom: 24px;
-}
 
 .sets-more {
   margin: 0 0 26px;
@@ -307,12 +306,7 @@ a:hover {
 /* MINI CONTACT */
 
 .mini-contact {
-  margin-top: 46px;
-}
-
-.mini-contact h3 {
-  font-size: 20px;
-  margin: 0 0 12px;
+  margin-top: 56px;
 }
 
 .mini-contact p {
@@ -357,39 +351,47 @@ a:hover {
   filter: none;
 }
 
-/* RELEASES */
+/* ALBUMS */
 
-.releases h2 {
-  margin-bottom: 24px;
+.albums-inner {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 70px;
+  align-items: start;
 }
 
-.releases-grid {
-  display: flex;
-  gap: 60px;
+.albums-col {
+  max-width: 640px;
 }
 
-.release {
-  width: 320px;
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.album {
+  width: 100%;
   transition: 0.25s ease;
 }
 
-.release:hover {
+.album:hover {
   transform: translateY(-6px);
 }
 
-.release iframe {
+.album iframe {
   width: 100%;
   height: 460px;
   border: none;
   display: block;
 }
 
-.release h3 {
+.album h3 {
   margin: 18px 0 4px;
   font-size: 20px;
 }
 
-.release p {
+.album p {
   margin: 0;
   color: #aaa;
 }
@@ -424,7 +426,10 @@ body > *:not(.cursor-glow) {
     padding-top: 90px;
   }
 
-  section {
+  section,
+  .about-col,
+  .singles-col,
+  .mini-contact {
     scroll-margin-top: 120px;
   }
 
@@ -435,12 +440,13 @@ body > *:not(.cursor-glow) {
   .hero,
   .sets,
   .about-singles,
-  .releases {
+  .albums {
     padding: 50px 20px;
   }
 
   .hero-inner,
-  .about-singles-inner {
+  .about-singles-inner,
+  .albums-inner {
     grid-template-columns: 1fr;
     gap: 50px;
   }
@@ -466,13 +472,8 @@ body > *:not(.cursor-glow) {
   }
 
   .sets h2,
-  .releases h2,
   .section-header h2 {
     font-size: 36px;
-  }
-
-  .releases-grid {
-    flex-direction: column;
   }
 
   .set iframe {
@@ -492,5 +493,10 @@ body > *:not(.cursor-glow) {
     width: 100%;
     height: auto;
     aspect-ratio: 1 / 1;
+  }
+
+  .albums-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
   }
 }

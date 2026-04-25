@@ -95,19 +95,34 @@ body {
   line-height: 1.5;
 }
 
-.hero-btn {
-  display: inline-block;
+.hero-socials {
   margin-top: 30px;
-  padding: 12px 24px;
-  border: 1px solid #f2eee8;
-  text-decoration: none;
-  color: #f2eee8;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.hero-socials a {
+  display: inline-flex;
+  opacity: 0.65;
   transition: all 0.2s ease;
 }
 
-.hero-btn:hover {
-  background: #f2eee8;
-  color: #0b0b0b;
+.hero-socials a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.hero-socials img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: grayscale(1) brightness(1.2);
+  transition: all 0.2s ease;
+}
+
+.hero-socials a:hover img {
+  filter: none;
 }
 
 .hero img {
@@ -348,6 +363,15 @@ body {
 
   .hero p {
     font-size: 16px;
+  }
+
+  .hero-socials {
+    gap: 16px;
+  }
+
+  .hero-socials img {
+    width: 21px;
+    height: 21px;
   }
 
   .hero img {

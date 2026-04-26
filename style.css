@@ -303,6 +303,10 @@ a:hover {
   gap: 22px;
 }
 
+.bandcamp-more {
+  display: none;
+}
+
 .album {
   width: 100%;
   transition: 0.25s ease;
@@ -497,6 +501,21 @@ body > *:not(.cursor-glow):not(.nav) {
     max-width: 100%;
     padding: 0 16px;
   }
+
+  .bandcamp-more {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #f2eee8;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+
+  .bandcamp-more:hover {
+    color: #ff4d2d;
+    border-bottom-color: #ff4d2d;
+  }
+
+}
 
   /* NAV MOBILE */
 

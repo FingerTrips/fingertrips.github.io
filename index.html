@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=56">
+  <link rel="stylesheet" href="./style.css?v=57">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
       <a href="#top" class="nav-logo">Finger Trips</a>
 
       <div class="nav-links">
-        <a href="#singles">Singles</a>
         <a href="#albums">Albums</a>
+        <a href="#singles">Singles</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a href="#sets">Sets</a>
@@ -51,11 +51,61 @@
     </div>
   </section>
 
-  <!-- SINGLES + CONTACT / ALBUMS + ABOUT -->
+  <!-- ALBUMS / SINGLES / INFO -->
   <section class="about-singles">
     <div class="container about-singles-inner">
 
-      <!-- LEFT: SINGLES + CONTACT -->
+      <!-- LEFT: ALBUMS -->
+      <div class="about-col">
+
+        <div class="albums-col" id="albums">
+          <div class="section-header">
+            <h2>Albums</h2>
+          </div>
+
+          <p class="albums-more">
+            Fresh EP just dropped.
+            <a href="https://fingertrips.bandcamp.com/" target="_blank" rel="noopener">
+              More on Bandcamp
+            </a>
+          </p>
+
+          <div class="albums-grid">
+            <div class="album">
+              <iframe
+                src="https://bandcamp.com/EmbeddedPlayer/album=839353287/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
+                seamless>
+              </iframe>
+
+              <h3>
+                <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">
+                  Just Right
+                </a>
+              </h3>
+
+              <p>EP · 2026</p>
+            </div>
+
+            <div class="album">
+              <iframe
+                src="https://bandcamp.com/EmbeddedPlayer/album=3468378720/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
+                seamless>
+              </iframe>
+
+              <h3>
+                <a href="https://fingertrips.bandcamp.com/album/for-the-club" target="_blank" rel="noopener">
+                  For The Club
+                </a>
+              </h3>
+
+              <p>EP · 2023</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CENTER: SINGLES -->
       <div class="singles-col" id="singles">
         <div class="section-header">
           <h2>Singles</h2>
@@ -79,6 +129,29 @@
             <h3>Love Inside</h3>
             <p>Rewind Records</p>
           </a>
+        </div>
+      </div>
+
+      <!-- RIGHT: ABOUT + CONTACT + FOLLOW -->
+      <div class="info-col">
+        <div class="about-block section-spacing" id="about">
+          <div class="section-header">
+            <h2>About</h2>
+          </div>
+
+          <div class="about-text">
+            <p>
+              Finger Trips is a DJ and producer based in Łódź, Poland, and the founder of Potok — a house music series running since 2020.
+            </p>
+
+            <p>
+              His sound blends minimal, deep tech and classic house influences, shaped by early inspirations from funk, soul and disco.
+            </p>
+
+            <p>
+              He has released music on labels such as Miura Records and Berlin House Music, and regularly performs at club P29.
+            </p>
+          </div>
         </div>
 
         <div class="mini-contact section-spacing" id="contact">
@@ -134,76 +207,6 @@
         </div>
       </div>
 
-      <!-- RIGHT: ALBUMS + ABOUT -->
-      <div class="about-col">
-
-        <div class="albums-col" id="albums">
-          <div class="section-header">
-            <h2>Albums</h2>
-          </div>
-
-          <p class="albums-more">
-            Fresh EP just dropped.
-            <a href="https://fingertrips.bandcamp.com/" target="_blank" rel="noopener">
-              More on Bandcamp
-            </a>
-          </p>
-
-          <div class="albums-grid">
-            <div class="album">
-              <iframe
-                src="https://bandcamp.com/EmbeddedPlayer/album=839353287/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
-                seamless>
-              </iframe>
-
-              <h3>
-                <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">
-                  Just Right
-                </a>
-              </h3>
-
-              <p>EP · 2026</p>
-            </div>
-
-            <div class="album">
-              <iframe
-                src="https://bandcamp.com/EmbeddedPlayer/album=3468378720/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
-                seamless>
-              </iframe>
-
-              <h3>
-                <a href="https://fingertrips.bandcamp.com/album/for-the-club" target="_blank" rel="noopener">
-                  For The Club
-                </a>
-              </h3>
-
-              <p>EP · 2023</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-block section-spacing" id="about">
-          <div class="section-header">
-            <h2>About</h2>
-          </div>
-
-          <div class="about-text">
-            <p>
-              Finger Trips is a DJ and producer based in Łódź, Poland, and the founder of Potok — a house music series running since 2020.
-            </p>
-
-            <p>
-              His sound blends minimal, deep tech and classic house influences, shaped by early inspirations from funk, soul and disco.
-            </p>
-
-            <p>
-              He has released music on labels such as Miura Records and Berlin House Music, and regularly performs at club P29.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
@@ -239,8 +242,8 @@
     });
 
     const sections = [
-      document.querySelector('#singles'),
       document.querySelector('#albums'),
+      document.querySelector('#singles'),
       document.querySelector('#about'),
       document.querySelector('#contact'),
       document.querySelector('#sets')

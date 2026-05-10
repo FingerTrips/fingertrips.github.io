@@ -41,7 +41,8 @@ a:hover {
   max-width: 1120px;
 }
 
-.about-singles .container {
+.about-singles .container,
+.sets .container {
   max-width: 1120px;
 }
 

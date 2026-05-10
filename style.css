@@ -287,8 +287,8 @@ a:hover {
 
 .about-singles-inner {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: 70px;
+  grid-template-columns: minmax(420px, 1fr) 150px minmax(230px, 0.74fr);
+  gap: 48px;
   align-items: start;
 }
 
@@ -298,6 +298,10 @@ a:hover {
 
 .singles-col {
   order: 2;
+}
+
+.info-col {
+  order: 3;
 }
 
 /* ALBUMS */
@@ -346,7 +350,7 @@ a:hover {
 /* ABOUT */
 
 .about-block {
-  margin-top: 200px;
+  margin-top: 0;
 }
 
 .about-text {
@@ -403,7 +407,7 @@ a:hover {
 /* CONTACT */
 
 .mini-contact {
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 .contact-block {

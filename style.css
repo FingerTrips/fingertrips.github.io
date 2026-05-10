@@ -368,13 +368,13 @@ a:hover {
 
 .singles-grid {
   display: grid;
-  grid-template-columns: minmax(0, 300px);
+  grid-template-columns: 150px;
   gap: 36px;
   justify-content: start;
 }
 
 .single {
-  width: 100%;
+  width: 150px;
   transition: 0.25s ease;
 }
 
@@ -383,9 +383,8 @@ a:hover {
 }
 
 .single img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  height: auto;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 10px;
 }

@@ -17,6 +17,7 @@ section,
 .about-block,
 .singles-col,
 .mini-contact,
+.contact-block,
 .albums-col {
   scroll-margin-top: 90px;
 }
@@ -42,7 +43,8 @@ a:hover {
 }
 
 .about-singles .container,
-.sets .container {
+.sets .container,
+.info-section .container {
   max-width: 1120px;
 }
 
@@ -214,6 +216,7 @@ a:hover {
 
 /* SECTIONS */
 
+.info-section,
 .sets,
 .about-singles {
   padding: 90px 60px;
@@ -291,7 +294,7 @@ a:hover {
 
 .about-singles-inner {
   display: grid;
-  grid-template-columns: 360px 150px minmax(360px, 1fr);
+  grid-template-columns: 360px 150px;
   gap: 64px;
   align-items: start;
 }
@@ -302,10 +305,6 @@ a:hover {
 
 .singles-col {
   order: 2;
-}
-
-.info-col {
-  order: 3;
 }
 
 /* ALBUMS */
@@ -352,6 +351,17 @@ a:hover {
 }
 
 /* ABOUT */
+
+.info-section {
+  padding-top: 20px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: minmax(420px, 1fr) minmax(220px, 0.55fr) minmax(220px, 0.55fr);
+  gap: 64px;
+  align-items: start;
+}
 
 .about-block {
   margin-top: 0;
@@ -414,6 +424,10 @@ a:hover {
   margin-top: 108px;
 }
 
+.info-section .contact-block {
+  margin-bottom: 0;
+}
+
 .contact-block {
   margin-bottom: 76px;
 }
@@ -426,7 +440,8 @@ a:hover {
   margin-bottom: 18px;
 }
 
-.mini-contact p {
+.mini-contact p,
+.contact-block p {
   color: #aaa;
   margin: 0 0 10px;
   font-size: 14px;
@@ -511,6 +526,7 @@ body > *:not(.cursor-glow):not(.nav) {
   .about-block,
   .singles-col,
   .mini-contact,
+  .contact-block,
   .albums-col {
     scroll-margin-top: 120px;
   }
@@ -625,10 +641,15 @@ body > *:not(.cursor-glow):not(.nav) {
 
   /* SECTION SPACING */
 
+  .info-section,
   .sets,
   .about-singles {
     padding: 0 20px;
     margin-top: 80px;
+  }
+
+  .info-section {
+    padding-bottom: 120px;
   }
 
   .about-block,
@@ -654,6 +675,19 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .about-singles-inner {
     display: block;
+  }
+
+  .info-grid {
+    display: block;
+  }
+
+  .info-section .about-block {
+    margin-top: 0;
+  }
+
+  .info-section .contact-block,
+  .info-section .follow-block {
+    margin-top: 80px;
   }
 
   /* DJ SET */

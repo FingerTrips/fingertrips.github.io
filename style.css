@@ -376,7 +376,7 @@ a:hover {
 .singles-grid {
   display: grid;
   grid-template-columns: 150px;
-  gap: 36px;
+  gap: 48px;
   justify-content: start;
 }
 
@@ -410,11 +410,11 @@ a:hover {
 /* CONTACT */
 
 .mini-contact {
-  margin-top: 80px;
+  margin-top: 108px;
 }
 
 .contact-block {
-  margin-bottom: 52px;
+  margin-bottom: 76px;
 }
 
 .mini-contact .section-header {

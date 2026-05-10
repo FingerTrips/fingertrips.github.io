@@ -1,3 +1,4 @@
+
 f@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 html {
@@ -367,13 +368,13 @@ a:hover {
 
 .singles-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 150px));
-  gap: 18px;
+  grid-template-columns: minmax(0, 300px);
+  gap: 36px;
   justify-content: start;
 }
 
 .single {
-  width: 150px;
+  width: 100%;
   transition: 0.25s ease;
 }
 
@@ -382,8 +383,9 @@ a:hover {
 }
 
 .single img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
 }

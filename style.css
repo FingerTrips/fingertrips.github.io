@@ -1,5 +1,5 @@
 
-f@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -315,7 +315,7 @@ a:hover {
 
 .albums-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 22px;
 }
 
@@ -683,10 +683,6 @@ body > *:not(.cursor-glow):not(.nav) {
 .albums-grid {
   grid-template-columns: 1fr;
   gap: 40px;
-}
-
-.albums-grid .album:nth-child(2) {
-  display: none;
 }
 
 .album iframe {

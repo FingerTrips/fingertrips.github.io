@@ -42,7 +42,7 @@ a:hover {
 }
 
 .about-singles .container {
-  max-width: 1320px;
+  max-width: 1120px;
 }
 
 /* NAV */
@@ -290,8 +290,8 @@ a:hover {
 
 .about-singles-inner {
   display: grid;
-  grid-template-columns: 360px 150px minmax(230px, 0.74fr);
-  gap: 72px;
+  grid-template-columns: 360px 150px minmax(360px, 1fr);
+  gap: 64px;
   align-items: start;
 }
 

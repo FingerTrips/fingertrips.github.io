@@ -37,9 +37,12 @@ a:hover {
   padding: 0 20px;
 }
 
-.hero .container,
-.about-singles .container {
+.hero .container {
   max-width: 1120px;
+}
+
+.about-singles .container {
+  max-width: 1320px;
 }
 
 /* NAV */
@@ -288,7 +291,7 @@ a:hover {
 .about-singles-inner {
   display: grid;
   grid-template-columns: minmax(420px, 1fr) 150px minmax(230px, 0.74fr);
-  gap: 48px;
+  gap: 72px;
   align-items: start;
 }
 

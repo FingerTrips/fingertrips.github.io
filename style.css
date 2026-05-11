@@ -43,8 +43,7 @@ a:hover {
 }
 
 .about-singles .container,
-.sets .container,
-.info-section .container {
+.sets .container {
   max-width: 1120px;
 }
 
@@ -216,7 +215,6 @@ a:hover {
 
 /* SECTIONS */
 
-.info-section,
 .sets,
 .about-singles {
   padding: 90px 60px;
@@ -356,17 +354,6 @@ a:hover {
 
 /* ABOUT */
 
-.info-section {
-  padding-top: 20px;
-}
-
-.info-grid {
-  display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(360px, 1fr);
-  gap: 64px;
-  align-items: start;
-}
-
 .about-block {
   margin-top: 0;
 }
@@ -384,6 +371,10 @@ a:hover {
 
 .about-text p:last-child {
   margin-bottom: 0;
+}
+
+.about-actions {
+  margin-top: 86px;
 }
 
 /* SINGLES */
@@ -428,8 +419,8 @@ a:hover {
   margin-top: 108px;
 }
 
-.info-section .contact-block {
-  margin-bottom: 0;
+.about-actions .contact-block {
+  margin-bottom: 64px;
 }
 
 .contact-block {
@@ -645,15 +636,10 @@ body > *:not(.cursor-glow):not(.nav) {
 
   /* SECTION SPACING */
 
-  .info-section,
   .sets,
   .about-singles {
     padding: 0 20px;
     margin-top: 80px;
-  }
-
-  .info-section {
-    padding-bottom: 120px;
   }
 
   .about-block,
@@ -681,16 +667,7 @@ body > *:not(.cursor-glow):not(.nav) {
     display: block;
   }
 
-  .info-grid {
-    display: block;
-  }
-
-  .info-section .about-block {
-    margin-top: 0;
-  }
-
-  .info-section .contact-block,
-  .info-section .follow-block {
+  .about-actions {
     margin-top: 80px;
   }
 

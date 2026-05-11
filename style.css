@@ -294,17 +294,21 @@ a:hover {
 
 .about-singles-inner {
   display: grid;
-  grid-template-columns: 360px 150px minmax(360px, 1fr);
+  grid-template-columns: minmax(360px, 1fr) 360px 150px;
   gap: 64px;
   align-items: start;
 }
 
 .about-col {
-  order: 1;
+  order: 2;
 }
 
 .singles-col {
-  order: 2;
+  order: 3;
+}
+
+.about-singles .about-block {
+  order: 1;
 }
 
 /* ALBUMS */

@@ -415,29 +415,39 @@ a:focus-visible {
 .link-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   margin-top: 24px;
 }
 
 .link-row a {
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
   border: 1px solid rgba(244, 239, 227, 0.16);
   border-radius: 4px;
   color: var(--paper);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+}
+
+.link-row img {
+  display: block;
+  width: 19px;
+  height: 19px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.35);
 }
 
 .link-row a:hover,
 .link-row a:focus-visible {
   opacity: 1;
-  color: var(--gold);
   border-color: rgba(240, 184, 79, 0.72);
+}
+
+.link-row a:hover img,
+.link-row a:focus-visible img {
+  filter: none;
 }
 
 /* DJ SET */

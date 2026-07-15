@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=69">
+  <link rel="stylesheet" href="./style.css?v=70">
 </head>
 
 <body>
@@ -17,11 +17,11 @@
       <a href="#top" class="nav-logo">Finger Trips</a>
 
       <div class="nav-links">
-        <a href="#albums">Albums</a>
-        <a href="#singles">Singles</a>
+        <a href="#latest-release">Latest</a>
+        <a href="#sets">Sets</a>
+        <a href="#releases">Releases</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="#sets">Sets</a>
       </div>
     </div>
   </nav>
@@ -43,78 +43,155 @@
           <span>DJ, Producer and founder of Potok Funka —</span>
           <span>a house music series in Łódź, Poland.</span>
         </p>
+
+        <div class="hero-actions" aria-label="Primary actions">
+          <a href="#latest-release" class="button button-primary">Listen to Just Right EP</a>
+          <a href="#contact" class="button button-secondary">Booking / Contact</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ALBUMS / SINGLES -->
-  <section class="about-singles">
-    <div class="container about-singles-inner">
+  <!-- LATEST RELEASE -->
+  <section class="latest-release" id="latest-release">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest Release</h2>
+      </div>
 
-      <!-- LEFT: ALBUMS -->
-      <div class="about-col">
+      <article class="feature-release">
+        <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener" class="feature-cover">
+          <img src="images/just-right.jpg" alt="Just Right EP cover">
+        </a>
 
-        <div class="albums-col" id="albums">
-          <div class="section-header">
-            <h2>Albums</h2>
-          </div>
-
-          <p class="albums-more">
-            Fresh EP just dropped.
-            <a href="https://fingertrips.bandcamp.com/" target="_blank" rel="noopener">
-              More on Bandcamp
-            </a>
+        <div class="feature-copy">
+          <p class="eyebrow">EP · 2026</p>
+          <h3>Just Right</h3>
+          <p>
+            A fresh Finger Trips EP built for warm-up rooms, late-night floors and deep house selectors.
           </p>
 
-          <div class="albums-grid">
-            <div class="album">
-              <iframe
-                src="https://bandcamp.com/EmbeddedPlayer/album=839353287/size=large/bgcol=333333/linkcol=e32c14/minimal=true/transparent=true/"
-                seamless>
-              </iframe>
-
-              <h3>
-                <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">
-                  Just Right
-                </a>
-              </h3>
-
-              <p>EP · 2026</p>
-            </div>
+          <div class="link-row" aria-label="Listen to Just Right EP">
+            <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">Bandcamp</a>
+            <a href="https://open.spotify.com/artist/6Dc3jikeQm0FwINjh1s1OH" target="_blank" rel="noopener">Spotify</a>
+            <a href="https://www.beatport.com/artist/finger-trips/1023304" target="_blank" rel="noopener">Beatport</a>
           </div>
         </div>
+      </article>
+    </div>
+  </section>
 
+  <!-- DJ SETS -->
+  <section class="sets" id="sets">
+    <div class="container">
+      <div class="section-header">
+        <h2>Latest DJ Set</h2>
       </div>
 
-      <!-- CENTER: SINGLES -->
-      <div class="singles-col" id="singles">
-        <div class="section-header">
-          <h2>Singles</h2>
+      <article class="set-feature">
+        <div class="set-copy">
+          <p class="eyebrow">SoundCloud playlist · 2026</p>
+          <h3>Mix's</h3>
+          <p>
+            Deep house, minimal and club-focused grooves selected by Finger Trips.
+          </p>
+
+          <a href="https://soundcloud.com/fingertrips" target="_blank" rel="noopener" class="button button-secondary">Open on SoundCloud</a>
         </div>
 
-        <div class="singles-grid">
-          <a href="https://www.beatport.com/track/what-you-do/17933238" target="_blank" rel="noopener" class="single">
-            <img src="images/single-1.jpg" alt="What You Do">
+        <div class="set-player">
+          <iframe
+            width="100%"
+            height="450"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            title="Mix's by Finger Trips on SoundCloud"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2163637478&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=false&show_reposts=false&show_teaser=true">
+          </iframe>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- RELEASES -->
+  <section class="releases" id="releases">
+    <div class="container">
+      <div class="section-header">
+        <h2>Selected Releases</h2>
+      </div>
+
+      <div class="releases-grid">
+        <article class="release-card">
+          <img src="images/just-right.jpg" alt="Just Right EP cover">
+          <div>
+            <p class="eyebrow">EP · 2026</p>
+            <h3>Just Right</h3>
+            <p>Finger Trips</p>
+            <div class="link-row">
+              <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener">Bandcamp</a>
+              <a href="https://open.spotify.com/artist/6Dc3jikeQm0FwINjh1s1OH" target="_blank" rel="noopener">Spotify</a>
+              <a href="https://www.beatport.com/artist/finger-trips/1023304" target="_blank" rel="noopener">Beatport</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="release-card">
+          <img src="images/for-the-club.jpg" alt="For The Club EP cover">
+          <div>
+            <p class="eyebrow">EP · 2023</p>
+            <h3>For The Club</h3>
+            <p>Berlin House Music</p>
+            <div class="link-row">
+              <a href="https://fingertrips.bandcamp.com/" target="_blank" rel="noopener">Bandcamp</a>
+              <a href="https://www.beatport.com/artist/finger-trips/1023304" target="_blank" rel="noopener">Beatport</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="release-card">
+          <img src="images/single-1.jpg" alt="What You Do cover">
+          <div>
+            <p class="eyebrow">Single · 2023</p>
             <h3>What You Do</h3>
             <p>Miura Records</p>
-          </a>
+            <div class="link-row">
+              <a href="https://www.beatport.com/track/what-you-do/17933238" target="_blank" rel="noopener">Beatport</a>
+            </div>
+          </div>
+        </article>
 
-          <a href="https://www.beatport.com/track/house-heads/17008905" target="_blank" rel="noopener" class="single">
-            <img src="images/single-3.jpg" alt="House Heads">
+        <article class="release-card">
+          <img src="images/single-3.jpg" alt="House Heads cover">
+          <div>
+            <p class="eyebrow">Single · 2022</p>
             <h3>House Heads</h3>
             <p>ATMO Recordings</p>
-          </a>
+            <div class="link-row">
+              <a href="https://www.beatport.com/track/house-heads/17008905" target="_blank" rel="noopener">Beatport</a>
+            </div>
+          </div>
+        </article>
 
-          <a href="https://www.beatport.com/track/love-inside/17317714" target="_blank" rel="noopener" class="single">
-            <img src="images/single-2.jpg" alt="Love Inside">
+        <article class="release-card">
+          <img src="images/single-2.jpg" alt="Love Inside cover">
+          <div>
+            <p class="eyebrow">Single · 2022</p>
             <h3>Love Inside</h3>
             <p>Rewind Records</p>
-          </a>
-        </div>
+            <div class="link-row">
+              <a href="https://www.beatport.com/track/love-inside/17317714" target="_blank" rel="noopener">Beatport</a>
+            </div>
+          </div>
+        </article>
       </div>
+    </div>
+  </section>
 
-      <!-- RIGHT: ABOUT -->
-      <div class="about-block section-spacing" id="about">
+  <!-- ABOUT -->
+  <section class="about-block" id="about">
+    <div class="container about-contact-grid">
+      <div>
         <div class="section-header">
           <h2>About</h2>
         </div>
@@ -132,80 +209,56 @@
             He has released music on labels such as Miura Records and Berlin House Music, and regularly performs at club P29.
           </p>
         </div>
+      </div>
 
-        <div class="about-actions">
-          <div class="contact-block section-spacing" id="contact">
-            <div class="section-header">
-              <h2>Contact</h2>
-            </div>
+      <div class="contact-block" id="contact">
+        <div class="section-header">
+          <h2>Contact</h2>
+        </div>
 
-            <p>
-              For bookings, collaborations &amp; inquiries
-            </p>
+        <p>
+          Booking / Collaborations
+        </p>
 
-            <a href="mailto:potokfunka@gmail.com" class="contact-email">
-              potokfunka@gmail.com
+        <a href="mailto:potokfunka@gmail.com" class="contact-email">
+          potokfunka@gmail.com
+        </a>
+
+        <div class="follow-block">
+          <div class="section-header">
+            <h2>Follow</h2>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.instagram.com/finger_trips/" target="_blank" rel="noopener">
+              <img src="icons/instagram.svg" alt="Instagram">
+            </a>
+
+            <a href="https://open.spotify.com/artist/6Dc3jikeQm0FwINjh1s1OH" target="_blank" rel="noopener">
+              <img src="icons/spotify.svg" alt="Spotify">
+            </a>
+
+            <a href="https://soundcloud.com/fingertrips" target="_blank" rel="noopener">
+              <img src="icons/soundcloud.svg" alt="SoundCloud">
+            </a>
+
+            <a href="https://www.youtube.com/@fingertrips4083" target="_blank" rel="noopener">
+              <img src="icons/youtube.svg" alt="YouTube">
+            </a>
+
+            <a href="https://fingertrips.bandcamp.com/" target="_blank" rel="noopener">
+              <img src="icons/bandcamp.svg" alt="Bandcamp">
+            </a>
+
+            <a href="https://www.facebook.com/fingertrips" target="_blank" rel="noopener">
+              <img src="icons/facebook.svg" alt="Facebook">
+            </a>
+
+            <a href="https://www.beatport.com/artist/finger-trips/1023304" target="_blank" rel="noopener">
+              <img src="icons/beatport.svg" alt="Beatport">
             </a>
           </div>
-
-          <div class="follow-block">
-            <div class="section-header">
-              <h2>Follow</h2>
-            </div>
-
-            <div class="contact-socials">
-              <a href="https://www.instagram.com/finger_trips/" target="_blank" rel="noopener">
-                <img src="icons/instagram.svg" alt="Instagram">
-              </a>
-
-              <a href="https://open.spotify.com/artist/6Dc3jikeQm0FwINjh1s1OH" target="_blank" rel="noopener">
-                <img src="icons/spotify.svg" alt="Spotify">
-              </a>
-
-              <a href="https://soundcloud.com/fingertrips" target="_blank" rel="noopener">
-                <img src="icons/soundcloud.svg" alt="SoundCloud">
-              </a>
-
-              <a href="https://www.youtube.com/@fingertrips4083" target="_blank" rel="noopener">
-                <img src="icons/youtube.svg" alt="YouTube">
-              </a>
-
-              <a href="https://fingertrips.bandcamp.com/" target="_blank" rel="noopener">
-                <img src="icons/bandcamp.svg" alt="Bandcamp">
-              </a>
-
-              <a href="https://www.facebook.com/fingertrips" target="_blank" rel="noopener">
-                <img src="icons/facebook.svg" alt="Facebook">
-              </a>
-
-              <a href="https://www.beatport.com/artist/finger-trips/1023304" target="_blank" rel="noopener">
-                <img src="icons/beatport.svg" alt="Beatport">
-              </a>
-            </div>
-          </div>
         </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- DJ SETS -->
-  <section class="sets" id="sets">
-    <div class="container">
-      <div class="section-header">
-        <h2>DJ Sets</h2>
-      </div>
-      <div class="sets-grid">
-        <div class="set">
-  <iframe
-  width="100%"
-  height="450"
-  scrolling="no"
-  frameborder="no"
-  allow="autoplay"
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2163637478&color=%23ff5500&auto_play=false&hide_related=true&show_comments=true&show_user=false&show_reposts=false&show_teaser=true">
-</iframe>
-</div>
       </div>
     </div>
   </section>
@@ -221,11 +274,11 @@
     });
 
     const sections = [
-      document.querySelector('#albums'),
-      document.querySelector('#singles'),
+      document.querySelector('#latest-release'),
+      document.querySelector('#sets'),
+      document.querySelector('#releases'),
       document.querySelector('#about'),
-      document.querySelector('#contact'),
-      document.querySelector('#sets')
+      document.querySelector('#contact')
     ];
 
     const navLinks = document.querySelectorAll('.nav-links a');

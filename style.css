@@ -689,7 +689,7 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .hero {
     height: calc(100svh - 110px);
-    min-height: 640px;
+    min-height: 560px;
     padding: 0;
   }
 
@@ -702,15 +702,15 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .hero-photo img {
     position: absolute;
-    width: 120% !important;
-    height: 120% !important;
+    width: 112% !important;
+    height: 112% !important;
     max-width: none !important;
     object-fit: cover !important;
-    object-position: center center !important;
-    top: -13%;
-    right: -15%;
+    object-position: 62% 40% !important;
+    top: -6%;
+    right: -8%;
     transform: none !important;
-    filter: brightness(1.1) contrast(1.05);
+    filter: brightness(0.9) contrast(1.08);
   }
 
   .hero::after {
@@ -719,9 +719,9 @@ body > *:not(.cursor-glow):not(.nav) {
       repeating-radial-gradient(circle at 50% 18%, transparent 0 16px, rgba(244, 239, 227, 0.035) 17px, transparent 19px),
       linear-gradient(
         to bottom,
-        rgba(0,0,0,0.05) 0%,
-        rgba(0,0,0,0.20) 36%,
-        rgba(0,0,0,0.78) 100%
+        rgba(0,0,0,0.12) 0%,
+        rgba(0,0,0,0.34) 34%,
+        rgba(0,0,0,0.86) 100%
       );
   }
 
@@ -735,31 +735,36 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .hero-content {
     max-width: 100%;
-    padding-bottom: 44px;
+    padding-bottom: 32px;
   }
 
   .hero h1 {
-    font-size: 64px;
+    font-size: 58px;
     line-height: 0.82;
-    letter-spacing: 6px;
+    letter-spacing: 5px;
   }
 
   .hero-bio {
-    margin-top: 18px;
-    font-size: 13px;
-    max-width: 92%;
+    margin-top: 16px;
+    font-size: 11px;
+    line-height: 1.45;
+    max-width: 100%;
+    letter-spacing: 1.7px;
   }
 
   .hero-actions {
-    gap: 10px;
-    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 20px;
   }
 
   .button {
     width: 100%;
-    min-height: 44px;
-    padding: 0 14px;
-    font-size: 12px;
+    min-height: 40px;
+    padding: 0 8px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
   }
 
   /* SECTION SPACING */

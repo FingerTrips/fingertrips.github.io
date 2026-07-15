@@ -176,7 +176,7 @@ a:hover {
   font-family: "Bebas Neue", Arial, sans-serif;
   font-size: clamp(86px, 8vw, 140px);
   line-height: 0.75;
-  letter-spacing: 4px;
+  letter-spacing: 8px;
   margin: 0;
   text-transform: uppercase;
 }
@@ -621,7 +621,7 @@ body > *:not(.cursor-glow):not(.nav) {
   .hero h1 {
     font-size: 64px;
     line-height: 0.82;
-    letter-spacing: 3px;
+    letter-spacing: 6px;
   }
 
   .hero-tagline {

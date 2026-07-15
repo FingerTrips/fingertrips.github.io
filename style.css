@@ -185,32 +185,14 @@ a:hover {
   display: block;
 }
 
-.hero-tagline {
+.hero-bio {
   margin-top: 30px;
   font-size: clamp(14px, 1.05vw, 17px);
-  text-transform: uppercase;
   color: #ff4d2d;
-}
-
-.hero-tagline span {
-  display: block;
-}
-
-.hero-tagline span:first-child {
-  letter-spacing: 3px;
-}
-
-.hero-tagline span:last-child {
+  max-width: 560px;
+  line-height: 1.4;
   letter-spacing: 2px;
-  opacity: 0.75;
-}
-
-.hero-bio {
-  margin-top: 20px;
-  font-size: 15px;
-  color: #aaa;
-  max-width: 390px;
-  line-height: 1.6;
+  text-transform: uppercase;
 }
 
 /* SECTIONS */
@@ -636,13 +618,9 @@ body > *:not(.cursor-glow):not(.nav) {
     letter-spacing: 6px;
   }
 
-  .hero-tagline {
+  .hero-bio {
     margin-top: 18px;
     font-size: 13px;
-  }
-
-  .hero-bio {
-    font-size: 14px;
     max-width: 92%;
   }
 

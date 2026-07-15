@@ -288,6 +288,18 @@ a:hover {
   border-radius: 8px;
 }
 
+@media (min-width: 769px) {
+  .set {
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .set iframe {
+    height: 336px;
+  }
+}
+
 /* MAIN GRID */
 
 .about-singles-inner {

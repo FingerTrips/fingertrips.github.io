@@ -927,6 +927,7 @@ body > *:not(.cursor-glow):not(.nav) {
 
   body {
     padding-top: 110px;
+    padding-bottom: 20svh;
   }
 
   section,
@@ -1078,7 +1079,7 @@ body > *:not(.cursor-glow):not(.nav) {
   .releases-about,
   .contact-section {
     padding: 0 20px;
-    margin-top: 56px;
+    margin-top: 64px;
   }
 
   .sets::before,
@@ -1136,7 +1137,7 @@ body > *:not(.cursor-glow):not(.nav) {
   .about-block,
   .follow-block,
   .contact-block {
-    margin-top: 28px;
+    margin-top: 32px;
   }
 
   .set-copy {
@@ -1168,13 +1169,13 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   .inline-contact {
-    margin-top: 36px;
+    margin-top: 64px;
   }
 
   /* DJ SET */
 
   .set-player {
-    margin-top: 26px;
+    margin-top: 32px;
     width: 100%;
   }
 

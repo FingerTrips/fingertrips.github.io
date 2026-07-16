@@ -608,7 +608,8 @@ a:focus-visible {
 }
 
 .set-feature {
-  grid-template-columns: minmax(240px, 330px) minmax(0, 1fr);
+  grid-template-columns: minmax(220px, 300px) minmax(480px, 680px);
+  justify-content: space-between;
 }
 
 .set-copy .button {
@@ -619,6 +620,8 @@ a:focus-visible {
   background:
     linear-gradient(145deg, rgba(244, 239, 227, 0.08), rgba(244, 239, 227, 0.02)),
     #11100f;
+  width: min(100%, 620px);
+  justify-self: end;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -633,13 +636,9 @@ a:focus-visible {
 }
 
 .set-player iframe:first-child {
-  height: 450px;
+  aspect-ratio: 1 / 1;
+  height: auto;
   border-radius: 4px;
-}
-
-.set-compact-player {
-  height: 20px;
-  margin-top: 10px;
 }
 
 @keyframes setPhotoDrift {
@@ -1076,6 +1075,7 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .set-player {
     margin-top: 26px;
+    width: 100%;
   }
 
   /* CONTACT */

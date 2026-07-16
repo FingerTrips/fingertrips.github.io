@@ -620,7 +620,8 @@ a:focus-visible {
   background:
     linear-gradient(145deg, rgba(244, 239, 227, 0.08), rgba(244, 239, 227, 0.02)),
     #11100f;
-  width: min(100%, 620px);
+  width: min(100%, 560px);
+  aspect-ratio: 1 / 1;
   justify-self: end;
   padding: 10px;
   border: 1px solid var(--line);
@@ -636,8 +637,7 @@ a:focus-visible {
 }
 
 .set-player iframe:first-child {
-  aspect-ratio: 1 / 1;
-  height: auto;
+  height: 100%;
   border-radius: 4px;
 }
 

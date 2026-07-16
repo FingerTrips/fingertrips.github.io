@@ -676,11 +676,20 @@ a:focus-visible {
   position: absolute;
   left: 28px;
   top: 28px;
+  display: block;
   width: 74px;
   height: 74px;
   border-radius: 50%;
   background: rgba(10, 9, 8, 0.88);
   border: 1px solid rgba(244, 239, 227, 0.18);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.set-play:hover,
+.set-play:focus-visible {
+  opacity: 1;
+  transform: scale(1.04);
+  background: rgba(10, 9, 8, 0.96);
 }
 
 .set-play::after {
@@ -721,27 +730,24 @@ a:focus-visible {
 .set-duration {
   position: absolute;
   right: 28px;
-  bottom: 46px;
+  bottom: 58px;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
-.set-progress {
+.set-mini-player {
   position: absolute;
   left: 28px;
   right: 28px;
-  bottom: 28px;
-  height: 5px;
-  background: rgba(244, 239, 227, 0.22);
-}
-
-.set-progress::before {
-  content: "";
+  bottom: 26px;
   display: block;
-  width: 36%;
-  height: 100%;
-  background: var(--acid);
+  width: calc(100% - 56px);
+  height: 20px;
+  border: 0;
+  border-radius: 2px;
+  overflow: hidden;
+  background: rgba(10, 9, 8, 0.84);
 }
 
 @keyframes setPhotoDrift {
@@ -1217,13 +1223,14 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .set-duration {
     right: 20px;
-    bottom: 40px;
+    bottom: 52px;
   }
 
-  .set-progress {
+  .set-mini-player {
     left: 20px;
     right: 20px;
     bottom: 24px;
+    width: calc(100% - 40px);
   }
 
   /* CONTACT */

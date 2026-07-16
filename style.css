@@ -562,7 +562,7 @@ a:focus-visible {
 
 .sets::before {
   z-index: 0;
-  background: url("images/dj-set-bg.jpg") 26% 66% / cover no-repeat;
+  background: url("images/dj-set-bg.jpg") 50% 100% / cover no-repeat;
   filter: brightness(1.08) saturate(1.08) contrast(1.03);
   -webkit-mask-image: linear-gradient(
     to bottom,

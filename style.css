@@ -986,6 +986,22 @@ body > *:not(.cursor-glow):not(.nav) {
     margin-top: 56px;
   }
 
+  .sets::before,
+  .releases-about::before {
+    display: none;
+  }
+
+  .sets::after,
+  .releases-about::after {
+    background:
+      repeating-radial-gradient(circle at 78% 28%, transparent 0 18px, rgba(244, 239, 227, 0.03) 19px, transparent 21px),
+      linear-gradient(
+        to bottom,
+        rgba(10,9,8,0.96) 0%,
+        rgba(10,9,8,0.86) 100%
+      );
+  }
+
   .sets h2,
   .section-header h2 {
     font-size: 34px;

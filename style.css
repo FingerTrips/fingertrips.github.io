@@ -353,25 +353,7 @@ a:focus-visible {
 
 .releases-about::before {
   z-index: 0;
-  background-image: url("images/about-releases-bg.jpg");
-  background-size: 115% auto;
-  background-position: center 48%;
-  opacity: 1;
-  filter: brightness(1.08) contrast(1.06);
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0,
-    #000 120px,
-    #000 calc(100% - 90px),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0,
-    #000 120px,
-    #000 calc(100% - 90px),
-    transparent 100%
-  );
+  display: none;
 }
 
 .releases-about::after {
@@ -636,7 +618,7 @@ a:focus-visible {
 
 .sets::before {
   z-index: 0;
-  background: url("images/dj-set-bg.jpg") 72% 100% / 150% auto no-repeat;
+  background: url("images/dj-set-bg.jpg") 58% 100% / 138% auto no-repeat;
   filter: brightness(1.2) saturate(1.1) contrast(1.02);
   animation: setPhotoDrift 22s ease-in-out infinite alternate;
   -webkit-mask-image: linear-gradient(

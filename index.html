@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Finger Trips</title>
-  <link rel="stylesheet" href="./style.css?v=70">
+  <link rel="stylesheet" href="./style.css?v=72">
 </head>
 
 <body>
@@ -19,7 +19,7 @@
       <div class="nav-links">
         <a href="#latest-release">Music</a>
         <a href="#sets">DJ Sets</a>
-        <a href="#releases" class="desktop-hidden">Releases</a>
+        <a href="#releases" class="desktop-hidden mobile-hidden">Releases</a>
         <a href="#about">About</a>
         <a href="#contact" class="desktop-hidden">Contact</a>
       </div>
@@ -61,9 +61,18 @@
       </div>
 
       <article class="feature-release">
-        <a href="https://fingertrips.bandcamp.com/album/just-right" target="_blank" rel="noopener" class="feature-cover">
-          <img src="images/just-right.jpg" alt="Just Right EP cover">
-        </a>
+        <div class="feature-cover-shell">
+          <button type="button" class="feature-cover bc-cover-toggle" aria-label="Play Just Right on Bandcamp" aria-expanded="false">
+            <img src="images/just-right.jpg" alt="Just Right EP cover">
+            <span>Play on Bandcamp</span>
+          </button>
+
+          <div
+            class="bandcamp-embed"
+            data-src="https://bandcamp.com/EmbeddedPlayer/album=839353287/size=large/bgcol=333333/linkcol=e99708/minimal=true/transparent=true/"
+            hidden>
+          </div>
+        </div>
 
         <div class="feature-copy">
           <p class="eyebrow">EP · 2026</p>
@@ -305,6 +314,30 @@
 
     window.addEventListener('scroll', updateNav);
     window.addEventListener('load', updateNav);
+
+    const bandcampShell = document.querySelector('.feature-cover-shell');
+    const bandcampTrigger = document.querySelector('.bc-cover-toggle');
+    const bandcampEmbed = document.querySelector('.bandcamp-embed');
+
+    if (bandcampShell && bandcampTrigger && bandcampEmbed) {
+      bandcampTrigger.addEventListener('click', () => {
+        if (!bandcampEmbed.querySelector('iframe')) {
+          bandcampEmbed.innerHTML = `
+            <iframe
+              title="Just Right by Finger Trips on Bandcamp"
+              src="${bandcampEmbed.dataset.src}"
+              seamless>
+              <a href="https://fingertrips.bandcamp.com/album/just-right">Just Right by Finger Trips</a>
+            </iframe>
+          `;
+        }
+
+        bandcampShell.classList.add('is-playing');
+        bandcampTrigger.hidden = true;
+        bandcampTrigger.setAttribute('aria-expanded', 'true');
+        bandcampEmbed.hidden = false;
+      });
+    }
   </script>
 
 </body>

@@ -563,7 +563,8 @@ a:focus-visible {
 .sets::before {
   z-index: 0;
   background: url("images/dj-set-bg.jpg") 50% 100% / cover no-repeat;
-  filter: brightness(1.08) saturate(1.08) contrast(1.03);
+  filter: brightness(1.2) saturate(1.1) contrast(1.02);
+  animation: setPhotoDrift 22s ease-in-out infinite alternate;
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0,
@@ -586,18 +587,18 @@ a:focus-visible {
     repeating-radial-gradient(circle at 78% 28%, transparent 0 18px, rgba(244, 239, 227, 0.035) 19px, transparent 21px),
     linear-gradient(
       to right,
-      rgba(10,9,8,0.82) 0%,
-      rgba(10,9,8,0.62) 34%,
-      rgba(10,9,8,0.26) 68%,
-      rgba(10,9,8,0.42) 100%
+      rgba(10,9,8,0.78) 0%,
+      rgba(10,9,8,0.54) 34%,
+      rgba(10,9,8,0.2) 68%,
+      rgba(10,9,8,0.34) 100%
     ),
     linear-gradient(
       to bottom,
-      rgba(10,9,8,0.96) 0%,
-      rgba(10,9,8,0.58) 86px,
+      rgba(10,9,8,0.9) 0%,
+      rgba(10,9,8,0.48) 86px,
       rgba(10,9,8,0.12) 42%,
-      rgba(10,9,8,0.66) calc(100% - 120px),
-      rgba(10,9,8,0.76) 100%
+      rgba(10,9,8,0.58) calc(100% - 120px),
+      rgba(10,9,8,0.72) 100%
     );
 }
 
@@ -614,22 +615,143 @@ a:focus-visible {
   margin-top: 12px;
 }
 
+.set-meta {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 24px;
+  color: var(--paper);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.set-meta span {
+  color: var(--muted);
+}
+
+.set-meta span:first-child {
+  color: var(--paper);
+  font-size: 26px;
+  font-family: "Bebas Neue", Arial, sans-serif;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
 .set-player {
   background:
     linear-gradient(145deg, rgba(244, 239, 227, 0.08), rgba(244, 239, 227, 0.02)),
     #11100f;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
 }
 
-.set-player iframe {
+.set-player-card {
+  position: relative;
   display: block;
-  width: 100%;
-  height: 450px;
-  border: none;
+  min-height: 405px;
+  overflow: hidden;
   border-radius: 4px;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(10,9,8,0.12) 0%,
+      rgba(10,9,8,0.18) 50%,
+      rgba(10,9,8,0.72) 100%
+    ),
+    url("images/dj-set-bg.jpg") 50% 100% / cover no-repeat;
+  color: var(--paper);
+  box-sizing: border-box;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.set-player-card:hover,
+.set-player-card:focus-visible {
+  opacity: 1;
+  transform: translateY(-2px);
+  filter: brightness(1.07);
+}
+
+.set-play {
+  position: absolute;
+  left: 28px;
+  top: 28px;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(10, 9, 8, 0.88);
+  border: 1px solid rgba(244, 239, 227, 0.18);
+}
+
+.set-play::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: 23px;
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid var(--paper);
+}
+
+.set-player-info {
+  position: absolute;
+  left: 124px;
+  top: 31px;
+  display: grid;
+  gap: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.set-player-info span {
+  color: rgba(244, 239, 227, 0.72);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.set-player-info strong {
+  font-family: "Bebas Neue", Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.set-duration {
+  position: absolute;
+  right: 28px;
+  bottom: 46px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.set-progress {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  height: 5px;
+  background: rgba(244, 239, 227, 0.22);
+}
+
+.set-progress::before {
+  content: "";
+  display: block;
+  width: 36%;
+  height: 100%;
+  background: var(--acid);
+}
+
+@keyframes setPhotoDrift {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.025);
+  }
 }
 
 /* RELEASES / ABOUT */
@@ -1058,8 +1180,50 @@ body > *:not(.cursor-glow):not(.nav) {
     margin-top: 26px;
   }
 
-  .set-player iframe {
-    height: 450px;
+  .set-player-card {
+    min-height: 240px;
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(244, 239, 227, 0.07) 0%,
+        rgba(10,9,8,0.92) 100%
+      ),
+      #11100f;
+  }
+
+  .set-play {
+    left: 20px;
+    top: 20px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .set-play::after {
+    left: 23px;
+    top: 17px;
+    border-top-width: 11px;
+    border-bottom-width: 11px;
+    border-left-width: 17px;
+  }
+
+  .set-player-info {
+    left: 92px;
+    top: 22px;
+  }
+
+  .set-player-info strong {
+    font-size: 30px;
+  }
+
+  .set-duration {
+    right: 20px;
+    bottom: 40px;
+  }
+
+  .set-progress {
+    left: 20px;
+    right: 20px;
+    bottom: 24px;
   }
 
   /* CONTACT */

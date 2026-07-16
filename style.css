@@ -247,6 +247,8 @@ a:focus-visible {
 }
 
 .hero-bio span:last-child {
+  position: relative;
+  top: 0.5em;
   color: var(--paper);
   opacity: 0.82;
 }
@@ -842,6 +844,10 @@ body > *:not(.cursor-glow):not(.nav) {
     line-height: 1.45;
     max-width: 100%;
     letter-spacing: 1.7px;
+  }
+
+  .hero-bio span:last-child {
+    top: 0.42em;
   }
 
   .hero-actions {

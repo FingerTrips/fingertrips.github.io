@@ -1031,6 +1031,28 @@ body > *:not(.cursor-glow):not(.nav) {
     display: block;
   }
 
+  .releases-about-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-column {
+    display: contents;
+  }
+
+  .about-block {
+    order: 1;
+  }
+
+  .releases-panel {
+    order: 2;
+    margin-top: 34px;
+  }
+
+  .inline-contact {
+    order: 3;
+  }
+
   .feature-copy,
   .set-copy,
   .about-block,

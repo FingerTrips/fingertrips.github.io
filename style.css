@@ -607,11 +607,6 @@ a:focus-visible {
   z-index: 2;
 }
 
-.set-feature {
-  grid-template-columns: minmax(220px, 300px) minmax(480px, 680px);
-  justify-content: space-between;
-}
-
 .set-copy .button {
   margin-top: 18px;
 }
@@ -622,7 +617,7 @@ a:focus-visible {
     #11100f;
   width: min(100%, 420px);
   aspect-ratio: 1 / 1;
-  justify-self: end;
+  justify-self: start;
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;

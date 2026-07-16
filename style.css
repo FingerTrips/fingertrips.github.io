@@ -611,6 +611,10 @@ a:focus-visible {
   margin-top: 18px;
 }
 
+.set-copy {
+  transform: translateY(28px);
+}
+
 .set-player {
   background:
     linear-gradient(145deg, rgba(244, 239, 227, 0.08), rgba(244, 239, 227, 0.02)),
@@ -1045,12 +1049,11 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   .releases-panel {
-    order: 2;
-    margin-top: 34px;
+    display: none;
   }
 
   .inline-contact {
-    order: 3;
+    order: 2;
   }
 
   .feature-copy,
@@ -1059,6 +1062,10 @@ body > *:not(.cursor-glow):not(.nav) {
   .follow-block,
   .contact-block {
     margin-top: 28px;
+  }
+
+  .set-copy {
+    transform: none;
   }
 
   .feature-copy h3,

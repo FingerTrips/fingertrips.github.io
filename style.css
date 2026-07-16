@@ -492,6 +492,11 @@ a:focus-visible {
   text-transform: uppercase;
 }
 
+.set-copy h3 {
+  font-size: clamp(42px, 4.3vw, 68px);
+  line-height: 0.95;
+}
+
 .feature-copy p,
 .set-copy p {
   max-width: 500px;
@@ -1006,6 +1011,10 @@ body > *:not(.cursor-glow):not(.nav) {
   .feature-copy h3,
   .set-copy h3 {
     font-size: 54px;
+  }
+
+  .set-copy h3 {
+    font-size: 40px;
   }
 
   .releases-grid {

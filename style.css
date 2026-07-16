@@ -620,7 +620,7 @@ a:focus-visible {
   background:
     linear-gradient(145deg, rgba(244, 239, 227, 0.08), rgba(244, 239, 227, 0.02)),
     #11100f;
-  width: min(100%, 560px);
+  width: min(100%, 420px);
   aspect-ratio: 1 / 1;
   justify-self: end;
   padding: 10px;

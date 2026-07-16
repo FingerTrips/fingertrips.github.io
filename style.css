@@ -527,23 +527,24 @@ a:focus-visible {
 
 .releases-about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
   gap: 76px;
   align-items: start;
 }
 
 .releases-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
 }
 
 .release-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
   min-width: 0;
-  aspect-ratio: 1 / 1;
-  padding: 10px;
+  padding: 8px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(244, 239, 227, 0.035);
@@ -552,32 +553,32 @@ a:focus-visible {
 }
 
 .release-card img {
-  width: 100%;
-  max-height: 46%;
+  width: 92px;
+  max-height: none;
   object-fit: contain;
 }
 
 .release-card h3 {
   margin: 0 0 4px;
-  font-size: 15px;
+  font-size: 16px;
   letter-spacing: 0.2px;
 }
 
 .release-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.45;
 }
 
 .release-card .link-row {
   gap: 8px;
-  margin-top: auto;
+  margin-top: 10px;
 }
 
 .release-card .link-row a {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
 }
 
 .release-card .link-row img {
@@ -887,11 +888,17 @@ body > *:not(.cursor-glow):not(.nav) {
 
   .releases-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 12px;
+  }
+
+  .release-card img {
+    width: 84px;
   }
 
   .release-card {
-    max-width: 280px;
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 12px;
+    max-width: none;
   }
 
   /* DJ SET */

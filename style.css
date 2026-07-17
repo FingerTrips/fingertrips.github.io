@@ -909,7 +909,7 @@ body > *:not(.cursor-glow):not(.nav) {
 
   body {
     padding-top: 62px;
-    padding-bottom: 20svh;
+    padding-bottom: 0;
   }
 
   section,
@@ -1061,6 +1061,10 @@ body > *:not(.cursor-glow):not(.nav) {
   .contact-section {
     padding: 0 20px;
     margin-top: 64px;
+  }
+
+  .releases-about {
+    padding-bottom: 20svh;
   }
 
   .sets::before,

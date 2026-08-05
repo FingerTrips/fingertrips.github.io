@@ -675,7 +675,6 @@ a:focus-visible {
     linear-gradient(145deg, rgba(244, 239, 227, 0.08), rgba(244, 239, 227, 0.02)),
     #11100f;
   width: 100%;
-  aspect-ratio: 1 / 1;
   justify-self: start;
   padding: 10px;
   border: 1px solid var(--line);
@@ -692,7 +691,7 @@ a:focus-visible {
 }
 
 .set-player iframe:first-child {
-  height: 100%;
+  height: 600px;
   border-radius: 4px;
 }
 
@@ -1162,6 +1161,10 @@ body > *:not(.cursor-glow):not(.nav) {
   .set-player {
     margin-top: 32px;
     width: 100%;
+  }
+
+  .set-player iframe:first-child {
+    height: 500px;
   }
 
   /* CONTACT */

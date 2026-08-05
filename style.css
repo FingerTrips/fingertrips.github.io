@@ -1193,7 +1193,7 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   .set-player iframe:first-child {
-    height: 500px;
+    height: 100%;
   }
 
   /* CONTACT */

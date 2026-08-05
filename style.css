@@ -433,6 +433,11 @@ a:focus-visible {
   align-items: center;
 }
 
+.set-feature {
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  gap: 64px;
+}
+
 .feature-cover-shell {
   position: relative;
   width: 100%;
@@ -691,7 +696,7 @@ a:focus-visible {
 }
 
 .set-player iframe:first-child {
-  height: 600px;
+  height: 460px;
   border-radius: 4px;
 }
 

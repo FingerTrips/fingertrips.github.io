@@ -696,8 +696,26 @@ a:focus-visible {
 }
 
 .set-player iframe:first-child {
-  height: 460px;
+  height: 600px;
   border-radius: 4px;
+}
+
+.soundcloud-credit {
+  margin-top: 8px;
+  overflow: hidden;
+  color: #cccccc;
+  font-family: Interstate, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Garuda, Verdana, Tahoma, sans-serif;
+  font-size: 10px;
+  font-weight: 100;
+  line-break: anywhere;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: normal;
+}
+
+.soundcloud-credit a {
+  color: #cccccc;
+  text-decoration: none;
 }
 
 @keyframes setPhotoDrift {

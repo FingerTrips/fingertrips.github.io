@@ -1153,7 +1153,11 @@ body > *:not(.cursor-glow):not(.nav) {
   }
 
   .inline-contact {
-    margin-top: 64px;
+    margin-top: 28px;
+  }
+
+  .inline-contact .contact-block {
+    margin-top: 0;
   }
 
   /* DJ SET */

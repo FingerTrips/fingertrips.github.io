@@ -697,7 +697,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
   gap: 76px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .releases-grid {
@@ -761,6 +761,9 @@ a:focus-visible {
 }
 
 .info-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 0;
 }
 

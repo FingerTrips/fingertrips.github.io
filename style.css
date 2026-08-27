@@ -612,6 +612,8 @@ a:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
+  padding-top: 240px;
+  padding-bottom: 240px;
   background: var(--ink);
 }
 

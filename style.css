@@ -44,6 +44,7 @@ body::before {
 section,
 .about-block,
 .contact-block,
+.section-header,
 .latest-release,
 .releases-about,
 .contact-section {
@@ -903,6 +904,7 @@ body > *:not(.cursor-glow):not(.nav) {
   section,
   .about-block,
   .contact-block,
+  .section-header,
   .latest-release,
   .releases-about,
   .contact-section {

@@ -622,43 +622,19 @@ a:focus-visible {
 }
 
 .sets::before {
-  z-index: 0;
-  background: url("images/dj-set-bg.jpg") 88% 44% / cover no-repeat;
-  filter: brightness(1.2) saturate(1.1) contrast(1.02);
-  animation: setPhotoDrift 22s ease-in-out infinite alternate;
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0,
-    #000 130px,
-    #000 calc(100% - 130px),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0,
-    #000 130px,
-    #000 calc(100% - 130px),
-    transparent 100%
-  );
+  display: none;
 }
 
 .sets::after {
   z-index: 1;
   background:
+    radial-gradient(circle at 24% 18%, rgba(240, 184, 79, 0.1), transparent 34%),
+    radial-gradient(circle at 84% 72%, rgba(104, 216, 189, 0.08), transparent 38%),
     linear-gradient(
-      to right,
-      rgba(10,9,8,0.78) 0%,
-      rgba(10,9,8,0.54) 34%,
-      rgba(10,9,8,0.2) 68%,
-      rgba(10,9,8,0.34) 100%
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(10,9,8,0.9) 0%,
-      rgba(10,9,8,0.48) 86px,
-      rgba(10,9,8,0.12) 42%,
-      rgba(10,9,8,0.58) calc(100% - 120px),
-      rgba(10,9,8,0.72) 100%
+      145deg,
+      rgba(244, 239, 227, 0.045) 0%,
+      rgba(10,9,8,0.22) 42%,
+      rgba(10,9,8,0.7) 100%
     );
 }
 
@@ -718,16 +694,6 @@ a:focus-visible {
 .soundcloud-credit a {
   color: #cccccc;
   text-decoration: none;
-}
-
-@keyframes setPhotoDrift {
-  from {
-    transform: scale(1);
-  }
-
-  to {
-    transform: scale(1.025);
-  }
 }
 
 /* RELEASES / ABOUT */
